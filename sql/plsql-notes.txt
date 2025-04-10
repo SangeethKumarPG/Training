@@ -41,3 +41,30 @@ have default attributes like %FOUND, %ISOPEN, %ROWCOUNT etc.
 
 Explicit cursors are program defined cursors. It is used to gain more control over the context area. 
 We need to declare a cursor, initializing the cursor, opening the cursor and finally closing the cursor.
+
+
+procedures
+----------
+A subprogram is a program unit that performs a particular task. These subprograms are combined to form a larger program.
+A subprogram can be invoked by another subprogram or program which is called the calling program.
+We can create them and run them at any time. We don't need to compile the program everytime.
+
+A subprogram can be created at schema level, inside a package, inside a plsql block.
+
+At the schema level a subprogram is a standalone program. It is created with CREATE PROCEDURE or CREATE FUNCTION
+statement. it can be deleted with DROP PROCEDURE or DROP FUNCTION.
+
+A subprogram created inside a package is a packaged subprogram. It is stored in the database and can be deleted when the package
+is deleted with DROP PACKAGE statement. 
+
+NOTE: A Function must return a value. in other cases if we don't need to return values we use procedures.
+
+In procedures we have 3 type of parameters IN parameter, OUT paramater and IN OUT parameter.
+IN OUT parameter can be used as input and output.
+
+IN parameter is optional. OUT and IN OUT are mandatory for parameters.
+
+
+
+
+
