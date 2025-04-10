@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: justify;
+            font-size: 8rem;
+            animation-name: bounce;
+            animation-duration: 500ms;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+                opacity: 0;
+            }
+
+            25% {
+                transform: translateY(25px);
+                opacity: 0.2;
+            }
+
+            50% {
+                transform: translateY(50px);
+                opacity: 0.5;
+            }
+
+            75% {
+                transform: translateY(25px);
+                opacity: 0.7;
+            }
+
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+
+        }
+
+        #container {
+            width: 40vw;
+            height: 70vh;
+            background-color: bisque;
+            animation-name: change-color;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes change-color {
+            10% {
+                background-color: blue;
+                margin-left: 20px;
+                border-radius: 10%;
+                margin-top: 20px;
+            }
+
+            25% {
+                background-color: red;
+                margin-left: 40px;
+                border-radius: 25%;
+                margin-top: 50px;
+            }
+
+            50% {
+                background-color: orange;
+                margin-left: 50px;
+                border-radius: 50%;
+                margin-top: 60px;
+            }
+
+            75% {
+                background-color: yellow;
+                margin-left: 40px;
+                border-radius: 75%;
+                margin-top: 50px;
+            }
+
+            100% {
+                background-color: brown;
+                margin-left: 20px;
+                border-radius: 0%;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h3>&#x1F60E;</h3>
+    </div>
+</body>
+
+</html>

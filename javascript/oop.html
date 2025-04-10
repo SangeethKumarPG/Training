@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h3 id="targetElement"></h3>
+    <button onclick="multiplicationWrapper();">Multiply</button>
+</body>
+<script>
+    const person={
+        firstName : "John",
+        lastName : "Doe",
+        age:30
+    }
+    targetElement.innerHTML = `${person.firstName} ${person.lastName} is ${person.age} years old`;
+
+    function multiplyTwoNumbers(){
+        let firstNumber = parseInt(prompt("Enter the first number : "));
+        let secondNumber = parseInt(prompt("Enter the second number : "));
+        return firstNumber * secondNumber;
+    }
+    function multiplicationWrapper(){
+        alert(`Result is ${multiplyTwoNumbers()}`);
+    }
+</script>
+</html>

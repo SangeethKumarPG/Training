@@ -1,0 +1,43 @@
+LOOPS
+------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Arrays
+------
+An array is a colleciton type data. We call the array in PLSQL as VARRAY. The indexing of the array 
+starts from 1. We use the CREATE TYPE for also creating an array.
+We must specify the size and datatype of the array.
+
+syntax:
+CREATE OR REPLACE TYPE varray_type_name IS VARRAY(n) of <element_type>;
+OR
+TYPE array_name IS VARRAY(n) OF <element_type>;
+
+We can also use TABLE OF keyword to define arrays if we don't want to decalre the size of the array beforehand
+eg:
+TYPE MY_ARRAY IS TABLE OF VARCHAR2(40);
+MY_COLORS MY_ARRAY := MY_ARRAY(NULL, NULL, NULL);
+
+Cursors
+-------
+Oracle creates a memory area known as context area for processing an SQL statement, which contains all the information. 
+It is a context area where all the data of our queries are stored. It is an anonymous block. Oracle have 2 engines.
+For smaller queries the SQL engine will execute it directly. For tasks like  procedures the PLSQL engine is used. 
+A cursor is used to access and control the context area. 
+For DML statements a cursor is automatically created. This type of cursor is called Implicit cursor. Implicit cursors 
+have default attributes like %FOUND, %ISOPEN, %ROWCOUNT etc.
+
+Explicit cursors are program defined cursors. It is used to gain more control over the context area. 
+We need to declare a cursor, initializing the cursor, opening the cursor and finally closing the cursor.

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            background-color: aqua;
+            padding: 2rem;
+        }
+        button{
+            margin:5px;
+            width:2.5rem;
+            height: 2.5rem;
+        }
+        .container input{
+            margin-bottom: 1rem;
+            width:12.5rem;
+            height:4rem;
+        }
+        #clearButton{
+            width: 12.5rem;
+        }
+    </style>
+    <script>
+        var expression = "";
+        function handleKeyStroke(pressedKey){
+            expression +=pressedKey;
+            result.value = expression;
+        }
+
+        function calculate(){
+            let res = eval(expression);
+            result.value=res;
+        }
+
+        function clearInput(){
+            expression = "";
+            result.value="";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" name="result" id="result" disabled>
+        <div>
+            <button onclick="handleKeyStroke(9);">9</button>
+            <button onclick="handleKeyStroke(8);">8</button>
+            <button onclick="handleKeyStroke(7);">7</button>
+            <button onclick="handleKeyStroke('+');">+</button>
+        </div>
+        <div>
+            <button onclick="handleKeyStroke(6);">6</button>
+            <button onclick="handleKeyStroke(5);">5</button>
+            <button onclick="handleKeyStroke(4);">4</button>
+            <button onclick="handleKeyStroke('-');">-</button>
+        </div>
+        <div>
+            <button onclick="handleKeyStroke(3);">3</button>
+            <button onclick="handleKeyStroke(2);">2</button>
+            <button onclick="handleKeyStroke(1);">1</button>
+            <button onclick="handleKeyStroke('-');">-</button>
+        </div>
+        <div>
+            <button onclick="handleKeyStroke(0);">0</button>
+            <button onclick="handleKeyStroke('*');">*</button>
+            <button onclick="handleKeyStroke('/');">/</button>
+            <button onclick="calculate();">=</button>
+        </div>
+        <div>
+            <button id="clearButton" onclick="clearInput();">CLEAR</button>
+        </div>
+    </div>
+</body>
+</html>

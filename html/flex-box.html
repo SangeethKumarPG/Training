@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        section div:nth-child(1) {
+            background-color: blue;
+        }
+
+        section div:nth-child(2) {
+            background-color: rgb(172, 172, 245);
+        }
+
+        section div:nth-child(3) {
+            background-color: rgb(238, 238, 26);
+        }
+
+        section div:nth-child(4) {
+            background-color: lightgoldenrodyellow;
+        }
+
+        section {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        section div {
+            padding: 4rem;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+        <div>Gallery</div>
+    </section>
+</body>
+
+</html>
