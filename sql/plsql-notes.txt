@@ -64,7 +64,38 @@ IN OUT parameter can be used as input and output.
 
 IN parameter is optional. OUT and IN OUT are mandatory for parameters.
 
+functions
+---------
 
 
 
 
+Triggers
+--------
+We create triggers on insert update delete. We can choose to either activate the trigger before or after these operations.
+DBAs can create triggers for operations on SERVERERROR, LOGON, LOGOFF, STARTUP etc.
+
+We can create triggers on table, views, schema etc.
+We don't need to explicitly call the triggers.
+
+To create backup table we use :
+CREATE TABLE emp_backup as SELECT * FROM emp;
+
+:old is a keyword used to get the old value of the previous column.
+
+eg:
+CREATE OR REPLACE TRIGGER tgr_del_emp BEFORE DELETE ON emp FOR EACH ROW
+BEGIN
+    INSERT INTO emp_backup VALUES(:old.empno, :old.ename, :old.job, old:mgr, :old.hiredate, :old.sal, :old.comm, :old.deptno);
+END;
+
+ALTER TABLE table_name DISABLE ALL TRIGGERS; --- To disable all triggers
+ 
+ALTER TABLE table_name ENABLE ALL TRIGGERS; --- To enable all triggers
+
+ALTER TRIGGER trigger_name ENABLE; --To enable a enable a trigger of the specified name.
+
+ALTER TRIGGER trigger_name DISABLE; -- To disable a trigger of the specified name.
+
+Exceptions
+-----------
