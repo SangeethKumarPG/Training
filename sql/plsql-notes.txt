@@ -82,7 +82,7 @@ To create backup table we use :
 CREATE TABLE emp_backup as SELECT * FROM emp;
 
 :old is a keyword used to get the old value of the previous column.
-
+:new is also a keyword used to check if it a new value of the column.
 eg:
 CREATE OR REPLACE TRIGGER tgr_del_emp BEFORE DELETE ON emp FOR EACH ROW
 BEGIN
@@ -99,3 +99,60 @@ ALTER TRIGGER trigger_name DISABLE; -- To disable a trigger of the specified nam
 
 Exceptions
 -----------
+
+
+
+
+views & instead of trigger
+------
+Used for displaying data without tampering the data in the table. Views act like table, we can query the views like that of a table.
+A view is a virtual table. Views can be created on single tables or by combining multiple tables (using join statements).
+On views if you need to update or insert values into tables(if there are multiple tables used to create a view) we need a trigger for that.
+If there are single table table view we can directly insert or update into the original table.
+
+To do so we need to use INSTEAD OF Trigger.
+
+
+-- don't work beacuse we cannot insert values through views into multiple tables by default
+insert into EMP_X_DEPT VALUES(7722, 'KUMAR', 'ANALYST', '02/02/2000', 3500, 100, 30, 'SALES', 'CHICAGO');
+
+
+ 
+CREATE OR REPLACE TRIGGER trg_empdp_vw INSTEAD OF INSERT ON EMP_X_DEPT
+DECLARE
+check_exists number;
+BEGIN
+   SELECT COUNT(*) INTO check_exists FROM DEPT D WHERE D.DEPTNO=:NEW.DEPTNO;
+   IF check_exists = 0 THEN
+      INSERT INTO DEPT(DEPTNO,DNAME, LOC) VALUES (:NEW.DEPTNO, :NEW.DNAME, :NEW.LOC);
+   END IF;
+   INSERT INTO EMP(EMPNO, ENAME, JOB, HIREDATE, SAL, COMM, DEPTNO) VALUES (:NEW.EMPNO, :NEW.ENAME, :NEW.JOB, :NEW.HIREDATE, :NEW.SAL, :NEW.COMM, :NEW.DEPTNO);
+END;
+
+-- works
+insert into EMP_X_DEPT VALUES(7722, 'KUMAR', 'ANALYST', '02/02/2000', 3500, 100, 30, 'SALES', 'CHICAGO');
+
+SELECT * FROM EMP_X_DEPT;
+SELECT * FROM EMP;
+SELECT * FROM DEPT;
+
+Packages
+--------
+placing related functions, procedures etc together so that we can store them and access them easily. Package is a schema object.
+Package have 2 parts.
+1. Package specification : specify the name, input and output parameters. It is like an interface. All variables defined in here is called public object.
+2. Package body or defenition : All the logic is placed in this.
+
+CREATE OR REPLACE PACKAGE package_name IS
+    - public type declarations
+    - public cursor declarations
+END;
+
+to create a package body
+CREATE OR REPLACE PACKAGE BODY package_name IS 
+    - function defenitions, procedures etc
+END package_name;
+
+For procedures and functions we don't need to specify the REPLACE keyword in the defenition of the procedures.
+
+NOTE: When defining procedure in packge we must use IS instead of AS.
