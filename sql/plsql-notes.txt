@@ -104,7 +104,7 @@ Exceptions
 
 
 views & instead of trigger
-------
+--------------------------
 Used for displaying data without tampering the data in the table. Views act like table, we can query the views like that of a table.
 A view is a virtual table. Views can be created on single tables or by combining multiple tables (using join statements).
 On views if you need to update or insert values into tables(if there are multiple tables used to create a view) we need a trigger for that.
@@ -156,3 +156,70 @@ END package_name;
 For procedures and functions we don't need to specify the REPLACE keyword in the defenition of the procedures.
 
 NOTE: When defining procedure in packge we must use IS instead of AS.
+
+Records & colleciton
+--------------------
+Record is a datastructure that can hold multiple items of different kinds. Records consists of different fields 
+similar to a row of a database. 
+PLSQL can handle the following types of Records:
+- Table based : Can fetch only one record at a time. 
+- Cursor based.
+- User-defined records.
+
+To access any field of the record we use the (.) dot operator.
+
+A collection is an ordered group of elements having the same data type. Each element is identifed by the unique subscript of
+it's position in the collection.
+
+Bulk collections
+----------------
+Bulk collection reduces context switches between sql and plsql engine. It allows to fetch many records at a time.
+It is faster.
+It can be used instead of a cursor to fetch multiple rows at once.
+eg:
+DECLARE
+    TYPE emp_record_type  IS RECORD(ename VARCHAR2(10), empno NUMBER(4), sal NUMBER(7,2));
+    TYPE table_record_type IS TABLE of emp_record_type;
+    table_emp_record table_record_type;
+    BEGIN
+        SELECT ename, empno, sal BULK COLLECT INTO table_emp_record FROM emp;
+        DBMS_OUTPUT.PUT_LINE('Employee Data');
+        FOR i IN table_emp_record.FIRST..table_emp_record.LAST
+        LOOP
+            DBMS_OUTPUT.PUT_LINE(table_emp_record(i).empno||' : '||table_emp_record(i).ename||' is having salary of $'||table_emp_record(i).sal);
+            DBMS_OUTPUT.NEW_LINE();
+        END LOOP;
+    END;
+
+Collection Methods
+------------------
+EXIST(n) : if nth element exist in a collection
+LIMIT : checks the size limit of the collection.
+NEXT(n) : Returns the index number succeeding to number name
+PRIOR(n): 
+EXTEND(n) : Adds n null elements to a colleciton
+EXTEND(n,i) : Adds n copies of i into the colleciton.
+
+Transactions
+------------
+All the operations we do on the table or schema is a transaction. If you want modify that we use keywords like
+COMMIT, ROLLBACK, SAVEPOINT etc.
+A transaction is atomic. A transaction should be either committed or either rolled back. 
+A successfully executed SQL statements doesn't mean that a transaction is commited.
+Unless a transaction is committed SQL queries can be rolled back.
+For DDL statements such as create COMMIT is not required.
+For DCL statements such as GRANT COMMIT is used.
+
+You can rollback completely or to a savepoint. 
+savepoint is useful in long transactions if you want to place a marker which you can move incase of a failure.
+You can have multiple savepoints in a transaction.
+SAVEPOINT savepoint_name;
+
+To execute a COMMIT automatically on INSERT, UPDATE or DELETE commands is executed, you can set the 
+AUTOCOMMIT environment variables as -
+SET AUTOCOMMIT ON;
+SET AUTOCOMMIT OFF; 
+etc.
+
+
+
