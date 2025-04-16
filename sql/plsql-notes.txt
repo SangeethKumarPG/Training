@@ -221,5 +221,14 @@ SET AUTOCOMMIT ON;
 SET AUTOCOMMIT OFF; 
 etc.
 
+Query Optimization
+------------------
+Indexes are used for increasing the performance of queries. Indexes are set on columns which are frequently used in where clause.
+
+There are different types of indexes in Oracle
+1. Unique index : created on unique value columns such as primary keys.
+2. Bitmap index : It is created on columns whose values are distinct like yes/no, male/female etc. Matched values will be mapped to 1 and others to 0
+3. Composite index : more than once column is selected for creating an index
+4. Function index : It is created with the functions used in query statements. 
 
 
