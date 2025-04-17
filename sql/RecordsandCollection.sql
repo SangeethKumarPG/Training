@@ -72,4 +72,8 @@ BEGIN
     CLOSE emp_cursor;
 END;
 
+CREATE UNIQUE INDEX dept_index ON EMP(ENAME);
 
+SELECT * FROM EMP;
+
+DROP INDEX dept_index;

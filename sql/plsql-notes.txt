@@ -227,8 +227,26 @@ Indexes are used for increasing the performance of queries. Indexes are set on c
 
 There are different types of indexes in Oracle
 1. Unique index : created on unique value columns such as primary keys.
-2. Bitmap index : It is created on columns whose values are distinct like yes/no, male/female etc. Matched values will be mapped to 1 and others to 0
+2. Bitmap index : It is created on columns whose values are distinct like yes/no, male/female etc. Matched values will be mapped to 1 and others to 0. Need special permission for creating index.
 3. Composite index : more than once column is selected for creating an index
 4. Function index : It is created with the functions used in query statements. 
 
+To check if there are indexes on a table we can use 
+select * from all_indexes where table_name = 'table_name';
 
+The explain plan window in plsql developer shows the cost, time  for each query. It will show the operations performed for each query.
+According the complexity(number of conditions) of the query the cost of the query is increased. We must try to reduce the cost of the query.
+Once you add the indexes the cost will be reduced automatically.
+
+To create index :
+create unique index index_name on table_name(column_name);
+
+create index index_name on table_name(column1,column2);
+
+create bitmap index index_name on table_name(column);
+
+create index index_name on table_name(function_name(column)); 
+
+Partitions
+-----------
+When you have large tables we use partition functions. 
