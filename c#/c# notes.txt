@@ -1,0 +1,86 @@
+Comments
+--------
+// - single line Comments
+/* */ - multiline Comments.
+
+Variables
+---------
+Commonly used datatypes are 
+int
+double 
+char : to store single character. If you need to store more than one character you need to specify the size.
+string : used to store strings.
+bool
+
+typename Variable = value;
+
+Constants
+---------
+const keyword is used to create constant. The Variables defined with const cannot be changed.
+const variableName = value;
+
+C# is case sensitive.
+- variable names can have letters, digits and underscore
+- Names must begin with a letter or an underscore.
+- variable names are often started with small letters. if there are more than one word the first letter of the second word is capitalized.
+
+int - 4 bytes
+long - 8 bytes
+float -4 bytes
+char - 2bytes per character
+string - 2 bytes per character.
+
+Type casting
+------------
+Implicit casting : Automatic conversion from lower sized type to higher sized type (eg: from float to double).
+Explicit casting : Manual casting to supported type.
+    Convert class is used for this. 
+    Convert.ToString(), Convert.ToInt32(), Convert.ToInt64();
+
+To get user input we use:
+-------------------------
+Console.ReadLine(); - function. The accepted value should be converted to the required type. By default string is accepted.
+
+Operators
+---------
+Arithematic
+Logical
+Relational
+
+If you want to find the length of a string we can use .length property.
+.ToUpper()
+.ToLower()
+For converting to lower and upper case.
+
++ is used to concatenate strings.
+string.Concat(firstString, secondString) is a function used for concatenating two strings.
+
+SubString is used to extract a substring from a string.
+string.Substring(startIndex, length) is a function used for extracting substring from a string.
+
+indexOf is used to find the index of a character in a string.
+string.IndexOf(char) is a function used for finding the index of a character in a string.
+
+\ is used to escape special characters in a string.
+\' single quote escape character
+\\ backslash escape character
+\" double quote escape character
+\n new line character
+\t tab character
+\b backspace character
+\r carriage return character
+
+Conditional Statements
+----------------------
+if-else
+switch-case
+
+Loops
+-----
+for
+while
+do-while
+foreach (used to iterate over a collection)
+foreach(type variable in collection){}
+
+
