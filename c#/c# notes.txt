@@ -83,4 +83,111 @@ do-while
 foreach (used to iterate over a collection)
 foreach(type variable in collection){}
 
+OOPS
+----
+Abstraction
+Encapsulation
+Inheritance
+Polymorphism
 
+are the 4 pillars of OOPS.
+
+Advantages of OOPS
+-
+1. Reusability : We can use the code written for one class in another class. It let's us avoid DRY (Don't Repeat Yourself) principle.
+2. Modularity : We can divide the code into smaller, more manageable modules thus increasing the maintainability of the code.
+3. Encapsulation : We can hide the implementation details of a class and provide a public interface to the outside world.
+4. Inheritance : We can create a new class by deriving from an existing class.
+5. Polymorphism : We can write code that can work with objects of different classes.
+
+Class:
+------
+Class is a blueprint for creating objects. It defines the properties and methods of an object. Each object created from the class is an instance of the class.
+Class have properties and methods.
+
+The initialization of the class is done using the constructor using the new operator.
+
+eg:
+MyClass myObject = new MyClass();
+
+Access specifiers are used to control the access to the members of a class. The main access modifiers in C# are public, private, protected, internal.
+
+public - accessible from anywhere in the program.
+private - accessible only within the class.
+protected - accessible from the class and its derived classes.
+internal - accessible from the same assembly.
+
+constructor: A special method that is called when an object of the class is created. It is used to initialize the object's properties.
+constructors are of 2 types default constructor and parameterized constructor.
+
+default constructor: A constructor that does not take any arguments. It is called when an object of the class is created without any arguments.
+
+parameterized constructor: A constructor that takes arguments. It is used to initialize the object's properties with the values passed as arguments.
+
+Assembly is a collection of classes, interfaces, and other types that are built into a single file and can be referenced by other programs. 
+Namespaces: A namespace is a container for organizing classes and other types. It helps to avoid naming conflicts between different classes and types.
+
+properties
+----------
+A property is like a combination of a variable and method, it has two methods get and set.
+
+get - used to get the value of the property.
+set - used to set the value of the property.
+
+eg:
+class Person{
+    private string name;
+    public string Name{
+        get{
+            return name;
+        }
+        set{
+            name = value;
+        }
+    }
+}
+
+Encapsulation:
+--------------
+When you want to hide the implementation of a class from outside world, encapsulation is used. It is done using access modifiers.
+
+Abstraction:
+------------
+Data abstraction is the process of hiding the complex details of a system and showing only the necessary information to the user.
+Abstraction is achieved by hiding the internal details of an object and showing only the necessary information to the user.
+It is done using abstract classes, interfaces, and abstract methods.
+
+abstract keyword is used with classes and functions.
+abstract class - a class that cannot be instantiated. You cannot create an object of an abstract class.
+abstract method - a method that does not have an implementation. It is declared in an abstract class and must be implemented in the derived classes.
+
+abstract classes can have abstract methods and non-abstract methods.
+
+
+Inheritance:
+------------
+Inheritance is the process of creating a new class by deriving from an existing class. The new class is called the derived class, and the existing class is called the base class or parent class.
+
+The derived class inherits the properties and methods of the base class. It can also add its own properties and methods.
+
+eg:
+class Animal{
+    public void Eat(){
+        Console.WriteLine("Animal is eating");
+    }
+}
+
+class Dog : Animal{
+    public void Bark(){
+        Console.WriteLine("Dog is barking");
+    }
+}
+
+syntax:
+class DerivedClassName : BaseClassName{
+    //code
+}
+Polymorphism:
+-------------
+Polymorphism is the ability of an object to take on multiple forms. It allows us to write code that can work with objects of different classes.
+Polymorphism is achieved using method overloading, method overriding, and interfaces.
