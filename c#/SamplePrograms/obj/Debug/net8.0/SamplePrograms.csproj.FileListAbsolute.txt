@@ -1,0 +1,15 @@
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.sourcelink.json
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\bin\Debug\net8.0\SamplePrograms.exe
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\bin\Debug\net8.0\SamplePrograms.deps.json
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\bin\Debug\net8.0\SamplePrograms.runtimeconfig.json
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\bin\Debug\net8.0\SamplePrograms.dll
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\bin\Debug\net8.0\SamplePrograms.pdb
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.dll
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\refint\SamplePrograms.dll
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.pdb
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\SamplePrograms.genruntimeconfig.cache
+C:\Users\Administrator\Documents\Training\c#\SamplePrograms\obj\Debug\net8.0\ref\SamplePrograms.dll
