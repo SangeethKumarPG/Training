@@ -1,4 +1,7 @@
-﻿internal class Program
+﻿using System.Drawing;
+using SamplePrograms;
+
+internal class Program
 {
 
     public static void checkOddOrEven()
@@ -112,7 +115,25 @@
         //sumOfTenRandomNumbers();
 
         // odd and even among 10 random numbers
-        oddAndEvenAmongRandomNumbers();
+        //oddAndEvenAmongRandomNumbers();
 
+        //Inheritence
+        //Child childObject = new Child("Child Object", 2, "Child");
+        //childObject.checkValuesFromParent();
+
+        // Polymorphism
+        //Polymorphism polymorphism = new Polymorphism();
+        //polymorphism.calc();
+        //polymorphism.calc(32);
+        //Console.WriteLine("The number is : "+ polymorphism.calc("50"));
+        //Console.WriteLine("The sum is : "+polymorphism.calc(10,20));
+
+        // Method overriding
+        Circles circles = new Circles();
+        circles.area();
+        circles.showData();
+        Square square = new Square();
+        square.area();
+        square.showData();
     }
 }

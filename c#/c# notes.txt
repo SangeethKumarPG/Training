@@ -114,7 +114,8 @@ Access specifiers are used to control the access to the members of a class. The 
 
 public - accessible from anywhere in the program.
 private - accessible only within the class.
-protected - accessible from the class and its derived classes.
+protected - accessible from the class and its derived classes. To access the properties and methods of the base class we need to create an object of the 
+base child class and call the method of the superclass if you are trying to do it from the base class. We cannot access the protected members of the base class directly from outside of the derived class.
 internal - accessible from the same assembly.
 
 constructor: A special method that is called when an object of the class is created. It is used to initialize the object's properties.
@@ -191,3 +192,7 @@ Polymorphism:
 -------------
 Polymorphism is the ability of an object to take on multiple forms. It allows us to write code that can work with objects of different classes.
 Polymorphism is achieved using method overloading, method overriding, and interfaces.
+Interfaces allows us to have multiple Inheritance. In other cases we use method overloading and method overriding.
+
+In abstract classes, we can have abstract methods and non-abstract methods. In derived classes, we can implement the abstract methods and override the non-abstract methods.
+We must use the override keyword to override the base class method before the method.

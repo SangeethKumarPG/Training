@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|c:\\users\\administrator\\documents\\training\\c#\\sampleprograms\\shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|solutionrelative:shape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|c:\\users\\administrator\\documents\\training\\c#\\sampleprograms\\parent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|solutionrelative:parent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|c:\\users\\administrator\\documents\\training\\c#\\sampleprograms\\sampleprograms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|solutionrelative:sampleprograms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|c:\\users\\administrator\\documents\\training\\c#\\sampleprograms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|c:\\users\\administrator\\documents\\training\\c#\\sampleprograms\\polymorphism.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BAC925ED-A86E-4CE2-84DF-762FDDF3C5D3}|SamplePrograms.csproj|solutionrelative:polymorphism.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,12 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Shape.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Shape.cs",
+              "RelativeDocumentMoniker": "Shape.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Shape.cs",
+              "RelativeToolTip": "Shape.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwBgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T06:57:38.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Polymorphism.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Polymorphism.cs",
+              "RelativeDocumentMoniker": "Polymorphism.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Polymorphism.cs",
+              "RelativeToolTip": "Polymorphism.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T06:12:27.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Parent.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Parent.cs",
+              "RelativeDocumentMoniker": "Parent.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Parent.cs",
+              "RelativeToolTip": "Parent.cs",
+              "ViewState": "AgIAACMAAAAAAAAAAAAswBoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:57:22.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SamplePrograms",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\SamplePrograms.csproj",
+              "RelativeDocumentMoniker": "SamplePrograms.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\SamplePrograms.csproj",
+              "RelativeToolTip": "SamplePrograms.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-21T03:53:00.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAkwGgAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAwwIgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-18T04:25:39.991Z",
               "EditorCaption": ""
