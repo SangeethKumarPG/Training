@@ -196,3 +196,52 @@ Interfaces allows us to have multiple Inheritance. In other cases we use method 
 
 In abstract classes, we can have abstract methods and non-abstract methods. In derived classes, we can implement the abstract methods and override the non-abstract methods.
 We must use the override keyword to override the base class method before the method.
+
+Enums:
+------
+Enums are used to define a set of named integer constants.
+
+Syntax:
+enum EnumName{
+    Value1,
+    Value2,
+    Value3
+}We can access the values of the enums using the name of the enum.
+
+eg: 
+enum Days{
+    Monday,
+    Tuesday,
+    Wednesday,
+    Thursday,
+    Friday,
+    Saturday,
+    Sunday
+}   
+
+Exception
+----------
+Exceptions are errors that occur during the execution of a program.
+
+Exceptions are handled using try-catch blocks.
+
+try{
+    //code that may throw an exception    
+}
+catch(ExceptionType e){ //ExceptionType is the type of exception that we want to catch
+    //code to handle the exception
+}
+finally{                
+    //code that will always be executed, whether an exception is thrown or not.
+}
+
+Exception Types:
+-    SystemException - base class for all exceptions.
+-    ArgumentException - thrown when an argument is not valid.
+-    InvalidOperationException - thrown when an operation is not valid for the current state of the object.
+-    NullReferenceException - thrown when an object is null.
+-    IndexOutOfRangeException - thrown when an index is out of range.
+-    DivideByZeroException - thrown when a division by zero occurs.
+-    StackOverflowException - thrown when the stack overflows.
+-    OutOfMemoryException - thrown when there is not enough memory to allocate an object.   
+We must make sure that we place the base class of the exception in the last catch block.

@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Shape.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\Shape.cs",
               "RelativeToolTip": "Shape.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAgwBgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T06:57:38.589Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Polymorphism.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T06:12:27.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T06:12:27.926Z"
             },
             {
               "$type": "Document",
@@ -68,21 +67,19 @@
               "RelativeToolTip": "Parent.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAswBoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T03:57:22.061Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T03:57:22.061Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SamplePrograms",
+              "Title": "SamplePrograms.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\SamplePrograms.csproj",
               "RelativeDocumentMoniker": "SamplePrograms.csproj",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\SamplePrograms\\SamplePrograms.csproj",
               "RelativeToolTip": "SamplePrograms.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-04-21T03:53:00.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-21T03:53:00.187Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAH0AAAAAAAAAAAAwwIgAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-18T04:25:39.991Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-18T04:25:39.991Z"
             }
           ]
         }

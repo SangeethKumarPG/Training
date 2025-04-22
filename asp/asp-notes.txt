@@ -1,0 +1,30 @@
+Differrence between ASP.net and .net core:
+ASP.net is a web framework for building web applications using C# and HTML. It is a part of the .NET Framework and is used to build dynamic web applications. It is a server-side technology that runs on the IIS web server.
+.NET Core is a cross-platform, high-performance, open-source framework for building modern, cloud-based, and microservice-based applications. It is a part of the .NET Foundation and is used to build .NET applications.
+It is a client-side technology that runs on the .NET runtime. 
+Advantages of .net core:
+1.Faster performance: ASP.NET Core (built on .NET Core/.NET 5+) is faster than ASP.NET (built on the .NET Framework) due to architectural optimizations like a lightweight middleware pipeline, reduced overhead, and performance-focused libraries like System.Text.Json.
+
+2.Improved performance for modern workloads: ASP.NET Core is optimized for cloud-native and microservice architectures, with features like in-process hosting, async support, and integration with Docker/Kubernetes, making it more efficient than traditional ASP.NET.
+
+3.Enhanced security: ASP.NET Core benefits from modern security practices, including automatic security updates via NuGet, built-in HTTPS enforcement, and improved dependency management. Cross-platform compatibility also reduces risks tied to legacy Windows-specific vulnerabilities.
+
+4.Better scalability: ASP.NET Core’s lightweight, modular design allows horizontal scaling and stateless architectures, making it ideal for distributed systems. Features like WebSocket support and gRPC integration outperform ASP.NET’s monolithic approach.
+
+5.Modern developer experience: ASP.NET Core offers cross-platform development (Windows, macOS, Linux), a streamlined CLI, and integration with tools like Visual Studio Code. Features like dependency injection and Razor Pages simplify coding compared to ASP.NET.
+
+6.Advanced tooling: ASP.NET Core includes modern tools like Hot Reload, Docker integration, and cloud-native debugging. The SDK and runtime updates are more frequent and lightweight compared to ASP.NET’s older toolchain.
+
+7.Active support and updates: ASP.NET Core (part of .NET 5/6/7+) receives regular updates and long-term support, whereas legacy ASP.NET on .NET Framework is in maintenance mode with limited future development.
+
+Panel
+------
+Panel is a tool in webform to group multiple controls together and provide a single interface for the user to interact with. It is used to create a more organized and intuitive user interface. Panels can be nested to create complex layouts and provide a better user experience. Panels can be added to a webform using the panel designer or programmatically using the Panel class.
+
+DropDownList
+-------------
+DropDownList is a control in webform that allows the user to select a value from a list of options. It is used to provide a list of choices to the user and to restrict the user to select only one option. The DropDownList control can be added to a webform using the dropdownlist designer or programmatically using the DropDownList class.
+If you need to catch the event when the dropdownlist is changed, you can use the SelectedIndexChanged event.You can automatically create a function if you doubleclick on the dropdownlist in the designer.
+Inside the dropdownlist you can add items using the ListItem class. You can set the text and value of the item.
+It should be a dictionary with key and value pairs.
+If you want to perform this type of operation you must set the AutoPostBack property to true.
