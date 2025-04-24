@@ -119,5 +119,15 @@ namespace project_1
                 Response.Write("<script>window.alert('form submitted successfully!');</script>");
             }
         }
+
+        protected void BtnReset_Click(object sender, EventArgs e)
+        {
+            DDLDistrict.SelectedValue = "DST";
+            DDLQualification.SelectedValue = "Qual";
+            TextBoxName.Text = "";
+            RBLGender.SelectedValue = null;
+            TxtBoxAddress.Text = "";
+
+        }
     }
 }
