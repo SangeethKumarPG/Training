@@ -43,3 +43,23 @@ If we need to catch the event when the radio button is changed, we can use the S
 If we want to perform this type of operation we must set the AutoPostBack property to true.
 
 The !IsPostBack property is used to check if the control is being loaded for the first time or is being loaded after a postback. If it is being loaded for the first time, we can set the default value of the control using the SelectedValue property.
+
+CheckBox
+--------
+CheckBox is a control in webform that allows the user to select or deselect a value. It is used to provide a set of options to the user and to allow the user to select multiple options. The CheckBox control can be added to a webform using the checkbox designer or programmatically using the CheckBox class.
+
+CheckBoxList
+------------
+CheckBoxList is a control in webform that allows the user to group multiple checkboxes together and select multiple options. It is used to provide a set of options to the user and to allow the user to select multiple options. The CheckBoxList control can be added to a webform using the checkboxlist designer or programmatically using the CheckBoxList class.
+
+The CheckBoxList control is similar to the RadioButtonList control but it allows grouping of checkboxes. We can add checkboxes to the CheckBoxList control using the CheckBox class.
+
+The SelectedValue property is used to get the selected values of the checkboxes.
+
+We need a datastructure like a List to store the selected values.
+
+If we need to catch the event when the checkbox is changed, we can use the CheckedChanged event.
+
+If we want to perform this type of operation we must set the AutoPostBack property to true.
+
+The !IsPostBack property is used to check if the control is being loaded for the first time or is being loaded after a postback. If it is being loaded for the first time, we can set the default value of the control using the SelectedValue property.

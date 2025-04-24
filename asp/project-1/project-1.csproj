@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="BMI.aspx" />
     <Content Include="CheckBoxExample.aspx" />
+    <Content Include="CheckBoxListExample.aspx" />
     <Content Include="DropDownExample.aspx" />
     <Content Include="DropDownListWithTextBox.aspx" />
     <Content Include="MinorOrMajor.aspx" />
@@ -80,6 +81,7 @@
     <Content Include="RadioButtonList.aspx" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="ReverseOfNumber.aspx" />
+    <Content Include="SampleFormValidation.aspx" />
     <Content Include="SelectState.aspx" />
     <Content Include="StudentGradeCard.aspx" />
     <Content Include="SumAndAverage.aspx" />
@@ -101,6 +103,13 @@
     </Compile>
     <Compile Include="CheckBoxExample.aspx.designer.cs">
       <DependentUpon>CheckBoxExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckBoxListExample.aspx.cs">
+      <DependentUpon>CheckBoxListExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBoxListExample.aspx.designer.cs">
+      <DependentUpon>CheckBoxListExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="DropDownExample.aspx.cs">
       <DependentUpon>DropDownExample.aspx</DependentUpon>
@@ -179,6 +188,13 @@
     </Compile>
     <Compile Include="ReverseOfNumber.aspx.designer.cs">
       <DependentUpon>ReverseOfNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SampleFormValidation.aspx.cs">
+      <DependentUpon>SampleFormValidation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SampleFormValidation.aspx.designer.cs">
+      <DependentUpon>SampleFormValidation.aspx</DependentUpon>
     </Compile>
     <Compile Include="SelectState.aspx.cs">
       <DependentUpon>SelectState.aspx</DependentUpon>
