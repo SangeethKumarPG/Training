@@ -68,11 +68,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="BMI.aspx" />
+    <Content Include="CheckBoxExample.aspx" />
     <Content Include="DropDownExample.aspx" />
+    <Content Include="DropDownListWithTextBox.aspx" />
     <Content Include="MinorOrMajor.aspx" />
     <Content Include="MultiplicationTable.aspx" />
     <Content Include="Panel.aspx" />
     <Content Include="PassOrFail.aspx" />
+    <Content Include="QuizWithRadioButton.aspx" />
+    <Content Include="RadioButtonExample.aspx" />
+    <Content Include="RadioButtonList.aspx" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="ReverseOfNumber.aspx" />
     <Content Include="SelectState.aspx" />
@@ -90,12 +95,26 @@
     <Compile Include="BMI.aspx.designer.cs">
       <DependentUpon>BMI.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CheckBoxExample.aspx.cs">
+      <DependentUpon>CheckBoxExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckBoxExample.aspx.designer.cs">
+      <DependentUpon>CheckBoxExample.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DropDownExample.aspx.cs">
       <DependentUpon>DropDownExample.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DropDownExample.aspx.designer.cs">
       <DependentUpon>DropDownExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DropDownListWithTextBox.aspx.cs">
+      <DependentUpon>DropDownListWithTextBox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DropDownListWithTextBox.aspx.designer.cs">
+      <DependentUpon>DropDownListWithTextBox.aspx</DependentUpon>
     </Compile>
     <Compile Include="MinorOrMajor.aspx.cs">
       <DependentUpon>MinorOrMajor.aspx</DependentUpon>
@@ -126,6 +145,27 @@
       <DependentUpon>PassOrFail.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuizWithRadioButton.aspx.cs">
+      <DependentUpon>QuizWithRadioButton.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="QuizWithRadioButton.aspx.designer.cs">
+      <DependentUpon>QuizWithRadioButton.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtonExample.aspx.cs">
+      <DependentUpon>RadioButtonExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadioButtonExample.aspx.designer.cs">
+      <DependentUpon>RadioButtonExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadioButtonList.aspx.cs">
+      <DependentUpon>RadioButtonList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadioButtonList.aspx.designer.cs">
+      <DependentUpon>RadioButtonList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="RegistrationForm.aspx.cs">
       <DependentUpon>RegistrationForm.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

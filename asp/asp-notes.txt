@@ -28,3 +28,18 @@ If you need to catch the event when the dropdownlist is changed, you can use the
 Inside the dropdownlist you can add items using the ListItem class. You can set the text and value of the item.
 It should be a dictionary with key and value pairs.
 If you want to perform this type of operation you must set the AutoPostBack property to true.
+
+RadioButton
+-----------
+Radio button is a control in webform that allows the user to select only one option from a set of options. It is used to provide a set of options to the user and to restrict the user to select only one option. The RadioButton control can be added to a webform using the radiobutton designer or programmatically using the RadioButton class.
+To group multiple radio buttons together you can use the GroupName property. Mention the group name as same for multiple related radio buttons. We need to check for values individually to get the selected radio button.
+
+RadioButtonList
+---------------
+RadioButtonList is a control in webform that allows the user to group multiple radio buttons together and select only one option from a set of options. It is used to provide a set of options to the user and to restrict the user to select only one option. The RadioButtonList control can be added to a webform using the radiobuttonlist designer or programmatically using the RadioButtonList class.
+RadioButtonList is similar to RadioButton control but it allows grouping of radio buttons. We can add radio buttons to the RadioButtonList control using the RadioButton class.
+We can easily access the clicked radio button using the SelectedValue property.
+If we need to catch the event when the radio button is changed, we can use the SelectedIndexChanged event.
+If we want to perform this type of operation we must set the AutoPostBack property to true.
+
+The !IsPostBack property is used to check if the control is being loaded for the first time or is being loaded after a postback. If it is being loaded for the first time, we can set the default value of the control using the SelectedValue property.

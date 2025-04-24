@@ -24,6 +24,7 @@ namespace project_1
 
             if (DDLState.SelectedValue == "Kerala")
             {
+                DDLDistrict.Items.Clear();
                 Dictionary<string, string> districts = new Dictionary<string, string>();
                 districts.Add("Malappuram", "Malappuram");
                 districts.Add("Palakkad", "Palakkad");
@@ -35,6 +36,7 @@ namespace project_1
             }
             else if (DDLState.SelectedValue == "Tamilnadu")
             {
+                DDLDistrict.Items.Clear();
                 Dictionary<string, string> districts = new Dictionary<string, string>();
                 districts.Add("Chennai", "Chennai");
                 districts.Add("Coimbatore", "Coimbatore");
@@ -46,6 +48,7 @@ namespace project_1
             }
             else if (DDLState.SelectedValue == "Karnataka")
             {
+                DDLDistrict.Items.Clear();
                 Dictionary<string, string> districts = new Dictionary<string, string>();
                 districts.Add("Bangalore", "Bangalore");
                 districts.Add("Kolar", "Kolar");
@@ -57,6 +60,7 @@ namespace project_1
             }
             else
             {
+                DDLDistrict.Items.Clear();
                 DDLDistrict.Items.Add(new ListItem("Select a state", "select a state"));
             }
         }
