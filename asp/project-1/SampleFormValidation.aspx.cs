@@ -9,7 +9,7 @@ namespace project_1
 {
     public partial class SampleFormValidation : System.Web.UI.Page
     {
-
+        
         protected Boolean ValidateForm()
         {
             if(DDLDistrict.SelectedItem.Value=="DST")
@@ -128,6 +128,11 @@ namespace project_1
             RBLGender.SelectedValue = null;
             TxtBoxAddress.Text = "";
 
+            DistrictError.Visible = false;
+            QualificationError.Visible = false;
+            NameError.Visible = false;
+            GenderError.Visible = false;
+            AddressError.Visible = false;
         }
     }
 }
