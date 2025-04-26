@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="NavigateTo.aspx" />
     <Content Include="NavigationExample.aspx" />
+    <Content Include="ProductPrice.aspx" />
     <Content Include="SessionExample1.aspx" />
     <Content Include="SessionExample2.aspx" />
     <Content Include="SessionExample3.aspx" />
@@ -92,6 +93,13 @@
     </Compile>
     <Compile Include="NavigationExample.aspx.designer.cs">
       <DependentUpon>NavigationExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductPrice.aspx.cs">
+      <DependentUpon>ProductPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductPrice.aspx.designer.cs">
+      <DependentUpon>ProductPrice.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionExample1.aspx.cs">

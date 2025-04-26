@@ -3,71 +3,79 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\productprice.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:productprice.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\productprice.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:productprice.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\studentavgmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:studentavgmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\studentmarks.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:studentmarks.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\studentavgmarks.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\studentavgmarks.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:studentavgmarks.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample3.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample3.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample3.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\studentavgmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:studentavgmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\studentmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\studentmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:studentmarks.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample1.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample3.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample2.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample2.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\sessionexample1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\sessionexample1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:sessionexample1.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\valuepassingto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\valuepassingto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:valuepassingto.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\valuepassingto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\valuepassingto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:valuepassingto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\valuepassingfrom.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\valuepassingfrom.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:valuepassingfrom.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\valuepassingfrom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\valuepassingfrom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:valuepassingfrom.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\navigationexample.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\navigationexample.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:navigationexample.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\navigationexample.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\navigationexample.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:navigationexample.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|c:\\users\\administrator\\documents\\training\\c#\\project2\\navigateto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\navigateto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{32721928-42CE-4285-9D64-E6078292B9D3}|Project2.csproj|solutionrelative:navigateto.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
@@ -78,11 +86,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductPrice.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ProductPrice.aspx.cs",
+              "RelativeDocumentMoniker": "ProductPrice.aspx.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ProductPrice.aspx.cs",
+              "RelativeToolTip": "ProductPrice.aspx.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAADwvyEAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T04:49:20.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "ProductPrice.aspx",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ProductPrice.aspx",
+              "RelativeDocumentMoniker": "ProductPrice.aspx",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ProductPrice.aspx",
+              "RelativeToolTip": "ProductPrice.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-26T04:42:02.06Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "StudentAvgMarks.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentAvgMarks.aspx.cs",
               "RelativeDocumentMoniker": "StudentAvgMarks.aspx.cs",
@@ -95,46 +129,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "StudentMarks.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentMarks.aspx.cs",
               "RelativeDocumentMoniker": "StudentMarks.aspx.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentMarks.aspx.cs",
               "RelativeToolTip": "StudentMarks.aspx.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAABgAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-25T10:36:02.337Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "StudentAvgMarks.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentAvgMarks.aspx",
               "RelativeDocumentMoniker": "StudentAvgMarks.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentAvgMarks.aspx",
               "RelativeToolTip": "StudentAvgMarks.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T10:34:50.433Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "StudentMarks.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentMarks.aspx",
               "RelativeDocumentMoniker": "StudentMarks.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\StudentMarks.aspx",
               "RelativeToolTip": "StudentMarks.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T10:32:22.933Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "SessionExample3.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample3.aspx.cs",
               "RelativeDocumentMoniker": "SessionExample3.aspx.cs",
@@ -147,7 +181,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "SessionExample2.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample2.aspx.cs",
               "RelativeDocumentMoniker": "SessionExample2.aspx.cs",
@@ -160,7 +194,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "SessionExample1.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample1.aspx.cs",
               "RelativeDocumentMoniker": "SessionExample1.aspx.cs",
@@ -173,46 +207,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "SessionExample3.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample3.aspx",
               "RelativeDocumentMoniker": "SessionExample3.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample3.aspx",
               "RelativeToolTip": "SessionExample3.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T10:04:25.714Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "SessionExample2.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample2.aspx",
               "RelativeDocumentMoniker": "SessionExample2.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample2.aspx",
               "RelativeToolTip": "SessionExample2.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T10:03:17.16Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "SessionExample1.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample1.aspx",
               "RelativeDocumentMoniker": "SessionExample1.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\SessionExample1.aspx",
               "RelativeToolTip": "SessionExample1.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T10:03:00.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "ValuePassingTo.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingTo.aspx.cs",
               "RelativeDocumentMoniker": "ValuePassingTo.aspx.cs",
@@ -225,7 +259,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "ValuePassingFrom.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingFrom.aspx.cs",
               "RelativeDocumentMoniker": "ValuePassingFrom.aspx.cs",
@@ -238,46 +272,46 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "ValuePassingTo.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingTo.aspx",
               "RelativeDocumentMoniker": "ValuePassingTo.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingTo.aspx",
               "RelativeToolTip": "ValuePassingTo.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T08:59:50.924Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "ValuePassingFrom.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingFrom.aspx",
               "RelativeDocumentMoniker": "ValuePassingFrom.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\ValuePassingFrom.aspx",
               "RelativeToolTip": "ValuePassingFrom.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T08:59:35.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "NavigateTo.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\NavigateTo.aspx",
               "RelativeDocumentMoniker": "NavigateTo.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\NavigateTo.aspx",
               "RelativeToolTip": "NavigateTo.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T08:53:57.257Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "NavigationExample.aspx.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\NavigationExample.aspx.cs",
               "RelativeDocumentMoniker": "NavigationExample.aspx.cs",
@@ -290,13 +324,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "NavigationExample.aspx",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\NavigationExample.aspx",
               "RelativeDocumentMoniker": "NavigationExample.aspx",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\c#\\Project2\\NavigationExample.aspx",
               "RelativeToolTip": "NavigationExample.aspx",
-              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
               "WhenOpened": "2025-04-25T08:50:13.241Z",
               "EditorCaption": ""

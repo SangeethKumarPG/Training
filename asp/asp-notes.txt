@@ -96,3 +96,82 @@ To accept the data inside the Page_Load method:
  string value = Session["variableName"].ToString();
  The advantage of using session variables is that the data is not visible in the URL.
  We can use the same variable name in every page that we want to access.
+
+
+ ADO.net
+ ========
+ADO.net is a set of managed classes that provide a way to access data from a variety of data sources, including relational databases, OLE DB, and XML. It is used to connect to a database and execute SQL queries.
+
+Since database connections and operations are common for many webforms we have to create 
+The main classes in ADO.net are:
+
+SQLConnection: Used to connect to a database.
+syntax: 
+SQLConnection conn = new SQLConnection("Data Source=myServerAddress;Initial Catalog=myDataBase;Integrated Security=True");
+
+ExecuteNonQuery: Used to execute a non-query SQL statement.(INSERT, UPDATE, DELETE)
+syntax: 
+int result = conn.ExecuteNonQuery("INSERT INTO myTable (column1, column2) VALUES ('value1', 'value2')");
+Alternatively we can create a SQLCommand object and set the command text and connection.
+syntax:
+SqlCommand cmd = new SQLCommand();
+cmd.CommandText = "INSERT INTO myTable (column1, column2) VALUES (@value1, @value2)";
+cmd.Parameters.AddWithValue("@value1", "value1");
+
+
+ExecuteReader: Used to execute a query SQL statement and return the result set.
+syntax: 
+SQLCommand cmd = new SQLCommand("SELECT * FROM myTable", conn);
+SQLDataReader reader = cmd.ExecuteReader();
+
+We can check if a connection is open using the sqlConnectionObject.State. We need to check is against 
+System.Data.ConnectionState.Open.
+
+Example of a service class to connect to a database and execute a query:
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+
+namespace DatabaseConnectionPrograms
+{
+    public class Service
+    {
+        public SqlConnection sqlConnection = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Administrator\Documents\Company_431227.mdf;Integrated Security=True;Connect Timeout=30");
+        public void ExecuteQuery(SqlCommand cmd)
+        {
+            cmd.Connection = sqlConnection;
+            if (sqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                sqlConnection.Close();
+            }
+            sqlConnection.Open();
+            cmd.ExecuteNonQuery();
+            sqlConnection.Close();
+        } 
+
+        public SqlDataReader GetResult(SqlCommand cmd) {
+
+            cmd.Connection = sqlConnection;
+            if(sqlConnection.State == System.Data.ConnectionState.Open)
+            {
+                sqlConnection.Close();
+            }
+            sqlConnection.Open();
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
+            return sqlDataReader;
+        }
+    }
+}
+
+A GridView is used to display the data returned by the query inside the webform.
+Inside the cs file of the webform, we can create an object of the service class.
+Create a command object and set the command text.
+After this create a DataReader object and bind it to the gridview.
+syntax:
+SqlCommand cmd = new SqlCommand();
+cmd.CommandText = "SELECT * FROM table";
+SqlDataReader reader = service.GetResult(cmd);
+GridView1.DataSource = reader;
+GridView1.DataBind();
