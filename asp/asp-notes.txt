@@ -175,3 +175,9 @@ cmd.CommandText = "SELECT * FROM table";
 SqlDataReader reader = service.GetResult(cmd);
 GridView1.DataSource = reader;
 GridView1.DataBind();
+
+DataList
+---------
+DataList is a control in webform that is used to display a collection of data. It is used to display a list of items in a webform. The DataList control can be added to a webform using the datalist designer or programmatically using the DataList class.
+
+The DataList control is similar to the GridView control but it is used to display a collection of data. We can add items to the DataList control using the DataListItem class.

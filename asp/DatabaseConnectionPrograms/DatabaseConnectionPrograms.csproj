@@ -67,11 +67,35 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataListExample.aspx" />
+    <Content Include="EmployeeGridFetch.aspx" />
+    <Content Include="EmployeeUpdate.aspx" />
     <Content Include="Insert.aspx" />
     <Content Include="StudentDataGridView.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataListExample.aspx.cs">
+      <DependentUpon>DataListExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DataListExample.aspx.designer.cs">
+      <DependentUpon>DataListExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeGridFetch.aspx.cs">
+      <DependentUpon>EmployeeGridFetch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeGridFetch.aspx.designer.cs">
+      <DependentUpon>EmployeeGridFetch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeUpdate.aspx.cs">
+      <DependentUpon>EmployeeUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeUpdate.aspx.designer.cs">
+      <DependentUpon>EmployeeUpdate.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Insert.aspx.cs">
       <DependentUpon>Insert.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
