@@ -179,5 +179,99 @@ GridView1.DataBind();
 DataList
 ---------
 DataList is a control in webform that is used to display a collection of data. It is used to display a list of items in a webform. The DataList control can be added to a webform using the datalist designer or programmatically using the DataList class.
-
 The DataList control is similar to the GridView control but it is used to display a collection of data. We can add items to the DataList control using the DataListItem class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+FileUpload
+----------
+FileUpload is a control in webform that is used to upload files to the server. It is used to allow the user to upload files to the server. The FileUpload control can be added to a webform using the fileupload designer or programmatically using the FileUpload class.
+For placing the uploaded files we need to create a folder in the server.
+
+To check if the FileUpload field has a file we can use the HasFile property.
+To get the name of the uploaded file we can use the FileName property.
+We can create a path on the server by Server.MapPath method and the file name.
+
+To save the uploaded file on the server, we can use the SaveAs method of the FileUpload control.
+
+eg:
+ if (FileUpload1.HasFile)
+ {
+     string fileName = FileUpload1.FileName;
+     string path = Server.MapPath("~/uploads/" + fileName);
+     FileUpload1.SaveAs(path);
+     Label1.Text = "File Upload Success!!!";
+ }
+ else
+ {
+     Label1.Text = "Please select a file to upload!";
+ }
+
+ Calender
+ --------
+ Calender is a control in webform that is used to select a date. It is used to allow the user to select a date. The Calender control can be added to a webform using the calender designer or programmatically using the Calender class.
+ Calender control can be used to select date,time from the calender.
+ We can Listen to the SelectedDateChanged event to get the selected date. Or we can use the SelectedDate property to get the selected date.
+ We need to get the SelectedDate property from the Calender control and convert it into string
+ This will have the date and time. We need to split the string with '<space>' to get the date and time.
+
+ The 0th index of the string array will have the date and the 1st index will have the time.
+ eg:
+ string datetime = Calendar1.SelectedDate.ToString();
+string[] dateTimeArray = datetime.Split(' ');
+Label1.Text = dateTimeArray[0];
+
+The time will always be 00:00:00.0000000.
+
+Image
+-----
+Just to view an image on the screen. If you are using an image within your system you must use the 
+~/ to specify the path to the image. Otherwise the image will not be displayed.
+For images in the internet it is not a problem to use the full URL.
+
+Multiview
+---------
+Multiview is a control in webform that is used to display multiple views of data. It is used to display multiple views of data in a webform. The Multiview control can be added to a webform using the multiview designer or programmatically using the Multiview class.
+We can add muliple views to the Multiview control. A view is a screen in the webform. We can use the ViewState property to store the data for each view.
+
+Multiview let's us set the view index which can change the view inside the multiview. We can set the  view using
+MultiView.ActiveViewIndex 
+indexing starts from 0.
+
+Multiple views can exist inside a multi view. When we are switching between views the page url doesnot change.
+
+PlaceHolder
+------------
+Used to dynamically add controls to a webform. Without using placeholders we used to create controls and set the visibility to False. We can avoid this by using the placeholder.
+We don't have to place the controls statically in this.
+To create tools we need to create object of the control globally in the cs file and make it public.
+
+We can add controls to the placeholder using the Add() function.
+eg:
+PlaceHolder1.Add(new TextBox());
+
+If we want to remove a control from the placeholder we can use the Remove() function.
+eg:
+PlaceHolder1.Remove(TextBox1);
+
+If we want to clear all the controls from the placeholder we can use the Clear() function.
+
+eg:
+PlaceHolder1.Clear();
+
