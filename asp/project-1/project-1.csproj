@@ -75,6 +75,8 @@
     <Content Include="DropDownListWithTextBox.aspx" />
     <Content Include="ExampleList.aspx" />
     <Content Include="FileUpload.aspx" />
+    <Content Include="HyperlinkDestination.aspx" />
+    <Content Include="HyperlinkExample.aspx" />
     <Content Include="Images.aspx" />
     <Content Include="MinorOrMajor.aspx" />
     <Content Include="MultiplicationTable.aspx" />
@@ -151,6 +153,20 @@
     </Compile>
     <Compile Include="FileUpload.aspx.designer.cs">
       <DependentUpon>FileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HyperlinkDestination.aspx.cs">
+      <DependentUpon>HyperlinkDestination.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HyperlinkDestination.aspx.designer.cs">
+      <DependentUpon>HyperlinkDestination.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HyperlinkExample.aspx.cs">
+      <DependentUpon>HyperlinkExample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HyperlinkExample.aspx.designer.cs">
+      <DependentUpon>HyperlinkExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="Images.aspx.cs">
       <DependentUpon>Images.aspx</DependentUpon>
