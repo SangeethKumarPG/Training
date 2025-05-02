@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\TrainingApp\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6690026-A5AE-49A4-B5C6-B8DBA49C5385}|TrainingApp.csproj|c:\\users\\administrator\\documents\\training\\asp\\trainingapp\\loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B6690026-A5AE-49A4-B5C6-B8DBA49C5385}|TrainingApp.csproj|solutionrelative:loginpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6690026-A5AE-49A4-B5C6-B8DBA49C5385}|TrainingApp.csproj|c:\\users\\administrator\\documents\\training\\asp\\trainingapp\\registrationpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{B6690026-A5AE-49A4-B5C6-B8DBA49C5385}|TrainingApp.csproj|solutionrelative:registrationpage.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RegistrationPage.aspx",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\TrainingApp\\RegistrationPage.aspx",
+              "RelativeDocumentMoniker": "RegistrationPage.aspx",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\TrainingApp\\RegistrationPage.aspx",
+              "RelativeToolTip": "RegistrationPage.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-30T03:58:24.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LoginPage.aspx",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\TrainingApp\\LoginPage.aspx",
+              "RelativeDocumentMoniker": "LoginPage.aspx",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\TrainingApp\\LoginPage.aspx",
+              "RelativeToolTip": "LoginPage.aspx",
+              "LogicalView": "7651a702-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-04-30T03:54:47.945Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

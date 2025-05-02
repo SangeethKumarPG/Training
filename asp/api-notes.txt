@@ -1,0 +1,21 @@
+API
+=====
+API stands for Application Programming Interface. It is a set of protocols, routines, and tools for building software applications. It allows different software components to interact with each other. APIs are used to develop software applications, and they are essential for the success of modern businesses.
+Swagger
+-------
+Swagger is an open-source framework for building RESTful APIs. It allows developers to design and document APIs in a user-friendly interface. It provides a visual representation of the API, including the available endpoints, parameters, and responses. It also provides tools for testing and debugging the API.
+
+To create an api we use the business and dataacess.
+First create a new ASP.NET Core Web API project in Visual Studio when creating uncheck the option of place solution inside the project folder.
+
+Then right click on the solution and select Add -> New Project.
+Select Class library and Name it as "Business" and click on Add.
+Do the same for DataAccess project.
+
+Both the projects should be in the WebAPI project.
+inside the Business project create a new Folder called Service. Inside this create a service class. Make sure that the class is public.
+
+Inside the DataAccess project create a new folder called Repository. Inside this create a repository class. Make sure that the class is public.
+
+Now inside the API project right click on the Controllers folder and select Add -> Controller.
+Choose an empty controller give a controller name and click on Add.
