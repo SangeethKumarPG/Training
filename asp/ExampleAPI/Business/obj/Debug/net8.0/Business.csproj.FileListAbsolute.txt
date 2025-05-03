@@ -1,0 +1,16 @@
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\bin\Debug\net8.0\Business.deps.json
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\bin\Debug\net8.0\Business.dll
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\bin\Debug\net8.0\Business.pdb
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\bin\Debug\net8.0\DataAccess.dll
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.sourcelink.json
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.csproj.Up2Date
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.dll
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\refint\Business.dll
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\Business.pdb
+C:\Users\Administrator\Documents\Training\asp\ExampleAPI\Business\obj\Debug\net8.0\ref\Business.dll

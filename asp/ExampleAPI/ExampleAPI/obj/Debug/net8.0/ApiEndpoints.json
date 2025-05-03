@@ -1,5 +1,33 @@
 [
   {
+    "ContainingType": "ExampleAPI.Controllers.EmployeeController",
+    "Method": "GetAllEmployees",
+    "RelativePath": "GetAllEmp",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [],
+    "EndpointName": "GetAllEmployees"
+  },
+  {
+    "ContainingType": "ExampleAPI.Controllers.EmployeeController",
+    "Method": "GetName",
+    "RelativePath": "GetName/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "GetName"
+  },
+  {
     "ContainingType": "ExampleAPI.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

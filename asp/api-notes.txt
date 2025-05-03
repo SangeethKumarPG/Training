@@ -19,3 +19,207 @@ Inside the DataAccess project create a new folder called Repository. Inside this
 
 Now inside the API project right click on the Controllers folder and select Add -> Controller.
 Choose an empty controller give a controller name and click on Add.
+
+After this we need to add buid dependency and project reference.
+First right click on the API project and select Add -> Build Dependency -> Project Dependency.
+Choose the Business and dataacess projects and click on OK.
+
+Now right click on the API project and select Add -> Project Reference.
+Choose Business and dataacess projects and click on OK.
+
+After this we need to add the same for the Business.
+Right click on the Business project and select Add -> Build Dependency -> Project Dependency.
+Add the dataacess project and click on OK.
+Now right click on the Business project and select Add -> Project Reference.
+Add the dataacess project and click on OK.
+
+
+Service
+-------
+The service class is used for common operations that are used in multiple places. It is a modern feature of programming that allows us to create reusable code.
+The service class utilizes the dependency injection feature of ASP.NET Core to inject the repository class.
+The service class let's us encapsulate the business logic and make it reusable. It promotes seperation of concerns and makes the code more maintainable.
+
+Dependency injection : Dependency injection is a technique where an object receives its dependencies (such as other objects) from an external source. In ASP.NET Core, we use dependency injection to inject the repository class into the service class.
+
+To inject the service and repository classes into the controller.
+First add 
+builder.Services.AddTransient<classname>();
+
+inside the Program.cs of the API project.
+Do this for both Service and Repository classes.
+
+Then inside the controller class create private readonly objects for the service and repository classes. like:
+        private readonly EmployeeRepo _employeeRepo;
+        private readonly EmployeeService _employeeService;
+
+After this we need to inject the service and repository classes into the constructor of the controller.
+
+public EmployeeController(EmployeeRepo employeeRepo, EmployeeService employeeService)
+        {
+            _employeeRepo = employeeRepo;
+            _employeeService = employeeService;
+        }
+
+Now we can use the service and repository classes in the controller.
+
+After this inside the service class create an object of the repository class and do the constructor injection.
+like:
+private readonly EmployeeRepo _employeeRepo;
+
+public EmployeeService(EmployeeRepo employeeRepo)
+{
+    _employeeRepo = employeeRepo;
+}
+
+Now we can define functions in the repository class. inside the repository class create 
+functions using 
+public async Task<dynamic> functionName(arguments){
+    //code to execute the function
+}
+
+The async keyword is used to make the function asynchronous. The Task<dynamic> return type is used to return the result of the function.
+
+To call this function we use the service class. Inside the service class create a similar function and call the repository function.
+Like :
+public async Task<dynamic> functionName(arguments){
+    return await _repoObject.functionName(arguments);
+}
+
+NOTE: That we must use the await keyword when calling the repository function inside of the function in the service.
+ 
+After this we need to use the service class in the controller class to execute the function.
+For that create a function in the controller class which is similar to the service class function like:
+public async Task<dynamic> functionName(arguments){
+    return await _employeeService.functionName(arguments);
+}
+
+In the controller function we need to specify the type of the http request inside []. Along with this we need to specify the path of the api. If we want we can specify the Name of the api using Name attribute.
+We can pass parameters from route using the {parameterName}. To access this we need to specify it in the function argument using [FromRoute].
+Eg:
+        [HttpGet("GetName/{name}", Name ="GetName")]
+        public Task<dynamic> GetName([FromRoute]string name){
+            var res = _employeeService.GetNameService(name);
+            return res;
+        }
+
+appsettings.json is the configuration file for the application. It contains the database connection string, logging settings, and other application settings.
+Inside this specify the connection string for the database.
+For MSSQL server it will be like:
+"ConnectionStrings": {
+    "SQLConnection": "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Administrator\\Documents\\Company_431227.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=True"
+}
+
+After this create a folder called Context inside the DataAccess project. Inside this create a new class called DataContext. This class will be used to connect to the database.
+Extend the DataContext class with DbContext class. If you are getting import error then install the necessary packages.
+
+Inside the class create a private readonly string object for the connection string.
+
+Then create a constructor for the DataContext class which takes the IConfiguration object as argument.
+inisde that initialize the connection string by getting the connection string from the IConfiguration object.
+
+Then create a public function which returns an SqlConnection object.
+
+The complete code will look like this:
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+
+namespace DataAccess.Context
+{
+    public class DataContext:DbContext
+    {
+        private readonly string _connectionString;
+
+        public DataContext(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("SQLConnection");
+        }
+
+        public SqlConnection CreateConnection()
+        {
+            return new SqlConnection(_connectionString);
+        }
+    }
+}
+
+After this create a model folder inside the DataAccess project. Inside this create a new class called with the parameters. This class will be used to represent the table in the database.
+For example if we have a table called Employee with columns Id, Name, Designation then we will create a class called Employee with properties Id, Name, Designation.
+eg:
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccess.Models
+{
+    public class Employee
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Designation { get; set; }
+        public int Deparment {  get; set; }
+    }
+}
+
+the get; set; will create getters and setters for the properties automatically.
+
+After this inject the dependency of datacontext class and the model class into the Program.cs file of the API project.
+
+Then create an object for model and datacontext class inside the repository class.
+
+do the constructor injection for the model class and datacontext class.
+eg:
+ private DataContext _context;
+ private Employee _model;
+
+ public EmployeeRepo(Employee model, DataContext context)
+ {
+     _context = context;
+     _model = model;
+ }
+
+ We extend the Repository class with ControllerBase class so that we can use the built-in functions of the ControllerBase class like Ok() which returns the data in the form of an ok response in json format.
+ We can write functions in the repository to perform CRUD operations on the database.
+ We use IActionResult to return the response in the form of an IActionResult object. 
+ We can create connection by calling the CreateConnection() function of the datacontext class.
+ to open an asynchronous connection we use await OpenAsync() function on the connection object.
+We can create an sql command by using the constructor of SqlCommand class and passing the connection object and query as arguments.
+We can execute the sql command by calling the ExcuteReaderAsync() function on the SqlCommand object(if you want to retrieve data).
+
+We use the ReadAsync() function to read the data from the SqlDataReader object and convert it into a list of objects of the model class.
+The reader.GetInt32(), reader.GetString() functions are used to get the values of the columns in the SqlDataReader object.
+inside these reader.GetOrdinal() function is used to get the index of the column(column name) in the SqlDataReader object.
+eg:
+        public async Task<IActionResult> GetAllEmployeeDetails()
+        {
+            var cmd = "SELECT * FROM Employee";
+            var employees = new List<Employee>();
+            using (var connection = _context.CreateConnection())
+            {
+                await connection.OpenAsync();
+                using var command = new SqlCommand(cmd, connection);
+                using (var reader = await command.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync())
+                    {
+                        var employee = new Employee
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                            Name = reader.GetString(reader.GetOrdinal("Name")),
+                            Designation = reader.GetString(reader.GetOrdinal("Designation")),
+                            Department = reader.GetString(reader.GetOrdinal("Dept"))
+                        };
+
+                        employees.Add(employee);
+                    }
+                }
+            }
+            return Ok(employees);
+        }
