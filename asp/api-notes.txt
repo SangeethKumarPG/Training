@@ -223,3 +223,49 @@ eg:
             }
             return Ok(employees);
         }
+
+Razor Pages
+-----------
+Razor Pages is a new feature of ASP.NET Core that allows us to create web pages using Razor syntax. It is a lightweight and fast way to create web pages. 
+It's extension is .cshtml.
+
+To create an mvc app with view we need to search for ASP.NET core web app model view controller template in visual studio.
+
+Layout.cshtml is the main html page, here we will define the layout of the web page.
+
+Program.cs is the entry point of the application. We define the controller to be executed when the application starts.
+
+The name of the view folder is same as the name of the controller. If we define like this the controller will automatically be mapped to the view folder.
+In the program.cs we specify the controller name as well as the action(function) to be performed.
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+Inside the controller we define the action(function) to be performed Here we simply return the view.
+To create a controller we right click on the controller folder and select Add -> Controller.
+
+If you specify the controller name not as per the standard naming convention then you need to specify the full name wherever we use the controller.
+We use Pascal Case for the controller name and action name.
+
+We can create an action funtion like:
+        public IActionResult HomePage()
+        {
+            return View();
+        }
+The function returns an IActionResult object which is used to return the view.
+
+To create a view we can either right click on the view folder and select Add -> View or create a new view file manually.
+At this time we need to specify the view name exactly as the action function name.
+
+Alternatively we can create a view by right clicking on the Action function name and selecting Add View -> Razor view.
+By doing this automatically the folder name and view file will be created.
+
+If we want to add links we can use something like:
+ <a class="nav-link text-dark" asp-area="" asp-controller="Employee" asp-action="ViewEmployeeReport">View Report</a>
+Here we specify the controller and action name.
+If we want to get the data from the api and display it in our view we can use ajax requests. To send an ajax request to a particular controller 
+We need to pass the controller name and action name as url.
+For example if we have an EmployeeController with an action called  getData then we must send the ajax request to
+Employee/getData.
+
+We need to define the success callback function and the error callback function for ajax call.

@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DC15D82E-A8E3-401C-A636-964F5E7CB451}|ExampleAPI\\ExampleAPI.csproj|c:\\users\\administrator\\documents\\training\\asp\\exampleapi\\exampleapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DC15D82E-A8E3-401C-A636-964F5E7CB451}|ExampleAPI\\ExampleAPI.csproj|solutionrelative:exampleapi\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CC23490E-A624-45F3-816B-D6DB0B100798}|Business\\Business.csproj|c:\\users\\administrator\\documents\\training\\asp\\exampleapi\\business\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CC23490E-A624-45F3-816B-D6DB0B100798}|Business\\Business.csproj|solutionrelative:business\\services\\employeeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,11 +57,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\DataAccess\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "DataAccess\\Models\\Employee.cs",
@@ -73,12 +69,11 @@
               "RelativeToolTip": "DataAccess\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T06:49:37.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:49:37.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "DataContext.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\DataAccess\\Context\\DataContext.cs",
               "RelativeDocumentMoniker": "DataAccess\\Context\\DataContext.cs",
@@ -86,22 +81,20 @@
               "RelativeToolTip": "DataAccess\\Context\\DataContext.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAmwBAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T06:30:53.457Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:30:53.457Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "dbo.Employee [Data]",
+              "DocumentIndex": 4,
+              "Title": "dbo.Employee.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
-              "ToolTip": "dbo.Employee [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-03T06:18:50.743Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:18:50.743Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ExampleAPI.http",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\ExampleAPI.http",
               "RelativeDocumentMoniker": "ExampleAPI\\ExampleAPI.http",
@@ -109,12 +102,11 @@
               "RelativeToolTip": "ExampleAPI\\ExampleAPI.http",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
-              "WhenOpened": "2025-05-03T06:04:45.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:04:45.49Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ExampleAPI\\Properties\\launchSettings.json",
@@ -122,12 +114,11 @@
               "RelativeToolTip": "ExampleAPI\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T06:04:15.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:04:15.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\appsettings.json",
               "RelativeDocumentMoniker": "ExampleAPI\\appsettings.json",
@@ -135,12 +126,11 @@
               "RelativeToolTip": "ExampleAPI\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-03T06:04:07.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T06:04:07.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\Program.cs",
               "RelativeDocumentMoniker": "ExampleAPI\\Program.cs",
@@ -148,38 +138,23 @@
               "RelativeToolTip": "ExampleAPI\\Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAQwBEAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:43:13.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T04:43:13.412Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ExampleAPI",
+              "DocumentIndex": 7,
+              "Title": "ExampleAPI.csproj",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\ExampleAPI.csproj",
               "RelativeDocumentMoniker": "ExampleAPI\\ExampleAPI.csproj",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\ExampleAPI.csproj",
               "RelativeToolTip": "ExampleAPI\\ExampleAPI.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-05-03T03:52:37.122Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T03:52:37.122Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmployeeController.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\Controllers\\EmployeeController.cs",
-              "RelativeDocumentMoniker": "ExampleAPI\\Controllers\\EmployeeController.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\ExampleAPI\\Controllers\\EmployeeController.cs",
-              "RelativeToolTip": "ExampleAPI\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwB4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T06:54:35.009Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "EmployeeRepo.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\DataAccess\\Repository\\EmployeeRepo.cs",
               "RelativeDocumentMoniker": "DataAccess\\Repository\\EmployeeRepo.cs",
@@ -187,25 +162,24 @@
               "RelativeToolTip": "DataAccess\\Repository\\EmployeeRepo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T06:52:03.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T06:52:03.403Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\Business\\Services\\EmployeeService.cs",
               "RelativeDocumentMoniker": "Business\\Services\\EmployeeService.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\Business\\Services\\EmployeeService.cs",
               "RelativeToolTip": "Business\\Services\\EmployeeService.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA9wBwAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAowBwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T06:50:11.297Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\DataAccess\\Class1.cs",
               "RelativeDocumentMoniker": "DataAccess\\Class1.cs",
@@ -213,12 +187,11 @@
               "RelativeToolTip": "DataAccess\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T06:48:36.102Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T06:48:36.102Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\ExampleAPI\\Business\\Class1.cs",
               "RelativeDocumentMoniker": "Business\\Class1.cs",
@@ -226,8 +199,7 @@
               "RelativeToolTip": "Business\\Class1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T06:47:54.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-02T06:47:54.209Z"
             }
           ]
         }
