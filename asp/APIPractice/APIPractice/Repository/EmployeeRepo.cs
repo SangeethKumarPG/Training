@@ -40,6 +40,60 @@ namespace APIPractice.Repository
             return Ok(employees);
         }
 
+        public async Task<IActionResult> SearchEmployeesByName(string name)
+        {
+            var cmd = "SELECT Id, Name FROM Employee WHERE Name LIKE @name";
+            var employees = new List<Employee>();
+            using(var connection = _context.CreateConnection())
+            {
+                await connection.OpenAsync();
+                using var command = new SqlCommand(cmd, connection);
+                command.Parameters.AddWithValue("@name", "%" + name + "%");
+                using (var reader = command.ExecuteReader())
+                {
+                    while(await reader.ReadAsync())
+                    {
+                        var employee = new Employee
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                            Name = reader.GetString(reader.GetOrdinal("Name"))
+                        };
+                        employees.Add(employee);
+                    }
+                }
+            }
+            return Ok(employees);
+        }
+
+        public async Task<IActionResult> SearchEmployeeById(string id)
+        {
+            var userId = Convert.ToInt32(id);
+            var cmd = "SELECT * FROM Employee WHERE Id = @Id";
+            var employees = new List<Employee>();
+            using(var connection = _context.CreateConnection())
+            {
+                await connection.OpenAsync();
+                using var command = new SqlCommand(cmd, connection);
+                command.Parameters.AddWithValue("@Id", userId);
+                using(var reader = command.ExecuteReader())
+                {
+                    while(await reader.ReadAsync())
+                    {
+                        var employee = new Employee
+                        {
+                            Id = reader.GetInt32(reader.GetOrdinal("Id")),
+                            Name = reader.GetString(reader.GetOrdinal("Name")),
+                            Designation = reader.GetString(reader.GetOrdinal("Designation")),
+                            Dept = reader.GetString(reader.GetOrdinal("Dept"))
+                        };
+                        employees.Add(employee);
+                    }
+
+                }
+            }
+            return Ok(employees);
+        }
+
             
     }
 }

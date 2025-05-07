@@ -1,0 +1,115 @@
+﻿
+@{
+    ViewData["Title"] = "SearchEmployee";
+}
+
+<div class="container">
+    <input type="text" class="form-control mb-3" id="searchName" oninput="fetchEmployeeFromAPI();"/>
+    <div class="container" id="targetResult">
+        
+    </div>
+    <script>
+        function fetchEmployeeFromAPI(){
+            let name = searchName.value;
+            if(name!=""){
+            var responseData = "";
+            $.ajax({
+                type:"GET",
+                url: '/Employee/GetEmployeeName',
+                data:{ name},
+                async:true,
+                success: function(response){
+                    responseData = JSON.parse(response);
+                    console.log(responseData);
+                    populateResult(responseData);
+                },error: function(response){
+                    console.log(response);
+                }
+
+            });}else{
+                targetResult.innerHTML="";
+            }
+        }
+
+        function populateResult(result){
+            targetResult.innerHTML="";
+            const displayResult= document.getElementById("targetResult");
+            if(Array.isArray(result) && result.length > 0){
+                result.forEach(item=>{
+                    const parentContainer = document.createElement("div");
+                    parentContainer.style.backgroundColor = "#f0f0f0"; 
+                    parentContainer.style.padding = "10px"; 
+                    parentContainer.style.marginBottom = "5px";
+                    parentContainer.style.cursor = "pointer";
+                    parentContainer.setAttribute("data-id", item.id);
+                    Object.values(item).forEach((value,index)=>{
+                        const nameIdPair = document.createElement("span");
+                        nameIdPair.textContent = value;
+                        parentContainer.appendChild(nameIdPair);
+                        if (index < Object.values(item).length - 1) {
+                            parentContainer.appendChild(document.createTextNode(" ")); 
+                        }
+                    });
+                    displayResult.appendChild(parentContainer);
+                    parentContainer.addEventListener("click", function(){
+                        const id=this.getAttribute("data-id");
+                        populateInputFields(id);
+                    });
+                })
+            }
+        }
+
+        function populateInputFields(dataId){
+            $.ajax({
+                type:"GET",
+                url:"/Employee/GetEmployeeById",
+                data: {id:dataId},
+                async:true,
+                success:function(response){
+                    var inputResults = JSON.parse(response);
+                    console.log(inputResults);
+                    setInputFieldsData(inputResults);
+                },
+                error:function(response){
+                    console.log(error);
+                }
+
+            });
+        }
+
+        function setInputFieldsData(results){
+            if(Array.isArray(results) && results.length > 0){
+                results.forEach(item=>{
+                    userid.value=item.id;
+                    username.value=item.name;
+                    department.value = item.dept;
+                    designation.value = item.designation;
+                });
+            }
+        }
+    </script>
+</div>
+<div class="container">
+    <form>
+        <div>
+            <label for="userid">Id</label>
+            <input type="number" class="form-control" id="userid" disabled/>
+        </div>
+        <div class="mt-2">
+            <label for="username">Name</label>
+            <input type="text" class="form-control" id="username" disabled/>
+        </div>
+        <div class="mt-2">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department"/>
+        </div>
+        <div class="mt-2">
+            <label for="designation">Designation</label>
+            <input type="text" id="designation" class="form-control"/>
+        </div>
+        <button class="form-control btn btn-primary mt-4">Submit</button>
+
+    </form>
+</div>
+
+

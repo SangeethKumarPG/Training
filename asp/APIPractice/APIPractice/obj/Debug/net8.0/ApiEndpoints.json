@@ -11,6 +11,40 @@
     "EndpointName": "GetAllEmployees"
   },
   {
+    "ContainingType": "APIPractice.Controllers.EmployeeController",
+    "Method": "SearchEmployeeById",
+    "RelativePath": "api/v1/SearchEmployeesById/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "SearchEmployeeById"
+  },
+  {
+    "ContainingType": "APIPractice.Controllers.EmployeeController",
+    "Method": "SearchEmployeeByName",
+    "RelativePath": "api/v1/SearchEmployeesByName/{name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "SearchEmployees"
+  },
+  {
     "ContainingType": "APIPractice.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

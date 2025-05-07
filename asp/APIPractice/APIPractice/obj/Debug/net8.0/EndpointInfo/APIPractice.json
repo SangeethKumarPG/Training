@@ -18,6 +18,52 @@
         }
       }
     },
+    "/api/v1/SearchEmployeesByName/{name}": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "operationId": "SearchEmployees",
+        "parameters": [
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/SearchEmployeesById/{id}": {
+      "get": {
+        "tags": [
+          "Employee"
+        ],
+        "operationId": "SearchEmployeeById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [

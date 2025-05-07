@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\searchemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\searchemployee.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\viewemployeereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\viewemployeereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\viewemployeereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\viewemployeereport.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\homepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,10 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,11 +54,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": "SearchEmployee.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\SearchEmployee.cshtml",
+              "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Employee\\SearchEmployee.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\SearchEmployee.cshtml",
+              "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\SearchEmployee.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAIwFQAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-07T04:36:03.21Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\appsettings.json",
               "RelativeDocumentMoniker": "MVCExampleProject\\appsettings.json",
@@ -66,25 +79,24 @@
               "RelativeToolTip": "MVCExampleProject\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-05T07:14:24.165Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T07:14:24.165Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "ViewEmployeeReport.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\ViewEmployeeReport.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReport.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\ViewEmployeeReport.cshtml",
               "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReport.cshtml",
-              "ViewState": "AgIAAF0AAAAAAAAAAAAAAEUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAAAEUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-05T06:40:17.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "HomePage.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\HomePage.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Employee\\HomePage.cshtml",
@@ -92,25 +104,24 @@
               "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\HomePage.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-05T06:22:45.952Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T06:22:45.952Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "MVCExampleProject\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "MVCExampleProject\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAgwBoAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwFAAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:17:47.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Program.cs",
               "RelativeDocumentMoniker": "MVCExampleProject\\Program.cs",
@@ -122,19 +133,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "MVCExampleProject\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAABIAAAAAAAAAAAAUwBkAAACPAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAUwBwAAACPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-05T05:59:31.657Z"
+              "WhenOpened": "2025-05-05T05:59:31.657Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Home\\Privacy.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Home\\Privacy.cshtml",
@@ -146,7 +158,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "site.js",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\wwwroot\\js\\site.js",
               "RelativeDocumentMoniker": "MVCExampleProject\\wwwroot\\js\\site.js",
@@ -158,19 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\wwwroot\\css\\site.css",
-              "RelativeDocumentMoniker": "MVCExampleProject\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\wwwroot\\css\\site.css",
-              "RelativeToolTip": "MVCExampleProject\\wwwroot\\css\\site.css",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-05T05:57:57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Home\\Index.cshtml",
@@ -182,7 +182,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "MVCExampleProject\\Controllers\\HomeController.cs",
@@ -190,7 +190,8 @@
               "RelativeToolTip": "MVCExampleProject\\Controllers\\HomeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T05:53:20.843Z"
+              "WhenOpened": "2025-05-05T05:53:20.843Z",
+              "EditorCaption": ""
             }
           ]
         }

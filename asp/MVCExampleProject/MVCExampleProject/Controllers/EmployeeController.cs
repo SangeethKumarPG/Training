@@ -45,5 +45,41 @@ namespace MVCExampleProject.Controllers
                 return data;
             }
         }
+
+        public IActionResult SearchEmployee()
+        {
+            return View();
+        }
+
+        public string GetEmployeeName(string name) {
+            string apiEndPoint = "https://localhost:7045/api/v1/SearchEmployeesByName/" + name;
+            using (var client = new HttpClient()) {
+                string data = "";
+                client.BaseAddress = new Uri(apiEndPoint);
+                HttpResponseMessage result = client.GetAsync(client.BaseAddress).Result;
+                if (result.IsSuccessStatusCode) {
+                    data = result.Content.ReadAsStringAsync().Result;
+
+                }
+                return data;
+            }
+
+        }
+
+        public string GetEmployeeById(string id)
+        {
+            string apiEndPoint = "https://localhost:7045/api/v1/SearchEmployeesById/" + id;
+            using(var client = new HttpClient())
+            {
+                string data = "";
+                client.BaseAddress = new Uri(apiEndPoint);
+                HttpResponseMessage result = client.GetAsync(client.BaseAddress).Result;
+                if (result.IsSuccessStatusCode)
+                {
+                    data = result.Content.ReadAsStringAsync().Result;
+                }
+                return data;
+            }
+        }
     }
 }
