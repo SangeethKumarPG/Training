@@ -1,8 +1,7 @@
 ﻿
 @{
-    ViewData["Title"] = "ViewEmployeeReport";
+    ViewData["Title"] = "ViewEmployeeReportUsingModel";
 }
-
 <!DOCTYPE html>
 
 <html>
@@ -73,12 +72,11 @@
             var data = '';
             $.ajax({
                 type: "GET",
-                url: '/Employee/getAPIData',
+                url: '/Employee/getEmployeeDataToModel',
                         data: { datas: indata },
                         async: false,
                         success: function (response) {
-                            data = JSON.parse(response);
-                            LoadReport(data);
+                            LoadReport(response);
                         },
                         error: function (response) {
                             check = 0;
@@ -122,11 +120,14 @@
                 });
             }
         }
-            
+
 
 
 
     </script>
 </body>
 </html>
+
+
+
 

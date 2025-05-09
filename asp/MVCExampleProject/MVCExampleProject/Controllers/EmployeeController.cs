@@ -1,5 +1,6 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Mvc;
+using MVCExampleProject.Models;
 using Newtonsoft.Json;
 
 namespace MVCExampleProject.Controllers
@@ -118,5 +119,51 @@ namespace MVCExampleProject.Controllers
             }
             return data;
         }
+
+        public IActionResult ViewEmployeeReportUsingModel()
+        {
+            return View();
+        }
+
+        public List<Employee> getEmployeeDataToModel(string datas)     //Get API Response
+        {
+            // Split the input string 'datas' using '$' as the delimiter
+            //string[] datastring = datas.Split("$");
+            // Construct the API path using the second and first elements of the split array
+            string ApiPath = "https://localhost:7045/api/v1/" + datas;
+
+            // Create an instance of HttpClient to make the HTTP request
+            using (var client = new HttpClient())
+            {
+                // Initialize a variable to hold the response data
+                List<Employee> employees = new List<Employee>();
+                
+                // Set the base address of the HttpClient to the constructed API path
+                client.BaseAddress = new Uri(ApiPath);
+                // Make a GET request to the API and wait for the result
+                HttpResponseMessage result = client.GetAsync(client.BaseAddress).Result;
+                // Check if the response indicates success
+                if (result.IsSuccessStatusCode)
+                {
+                    // Read the response content as a string
+                    var jsonData = result.Content.ReadAsStringAsync().Result;
+                    var apiResponse = JsonConvert.DeserializeObject<List<dynamic>>(jsonData);
+                    foreach(var item in apiResponse)
+                    {
+                        var employee = new Employee
+                        {
+                            EmpCode = item.id,
+                            EmpName = item.name,
+                            Position = item.designation,
+                            Department = item.dept
+                        };
+                        employees.Add(employee);
+                    }
+                }
+                // Return the response data 
+                return employees;
+            }
+        }
+
     }
 }

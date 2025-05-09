@@ -326,4 +326,54 @@ public async Task<dynamic> InsertNewEmployee(string dataString)
     return data;
 }
 
+We can use the model to bind the data inside the controller. For this we need to create a class in the models folder.
+Inside the models we define the fields of the response structure. The name need not be identical to the name of the response structure.
+
+The controller method needs to return the model object. If the response of the api is an array we need to return the list of model objects from the controller.
+
+Once we call the api and read the result as string we need to convert it into a model object using the JsonConvert.DeserializeObject() function.
+If there is a list we need to specify the type as <List<dynamic>>.
+eg:
+                    var apiResponse = JsonConvert.DeserializeObject<List<dynamic>>(jsonData);
+
+after this iterate through the list and initialize the model fields from the response data.
+
+The complete controller class looks like:
+public List<Employee> getEmployeeDataToModel(string datas)     //Get API Response
+{
+    string ApiPath = "https://localhost:7045/api/v1/" + datas;
+
+    // Create an instance of HttpClient to make the HTTP request
+    using (var client = new HttpClient())
+    {
+        // Initialize a variable to hold the response data
+        List<Employee> employees = new List<Employee>();
+        
+        // Set the base address of the HttpClient to the constructed API path
+        client.BaseAddress = new Uri(ApiPath);
+        // Make a GET request to the API and wait for the result
+        HttpResponseMessage result = client.GetAsync(client.BaseAddress).Result;
+        // Check if the response indicates success
+        if (result.IsSuccessStatusCode)
+        {
+            // Read the response content as a string
+            var jsonData = result.Content.ReadAsStringAsync().Result;
+            var apiResponse = JsonConvert.DeserializeObject<List<dynamic>>(jsonData);
+            foreach(var item in apiResponse)
+            {
+                var employee = new Employee
+                {
+                    EmpCode = item.id,
+                    EmpName = item.name,
+                    Position = item.designation,
+                    Department = item.dept
+                };
+                employees.Add(employee);
+            }
+        }
+        // Return the response data 
+        return employees;
+    }
+}
+
 

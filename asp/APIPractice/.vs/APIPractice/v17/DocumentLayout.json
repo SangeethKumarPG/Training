@@ -49,22 +49,20 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "dbo.Employee [Data]",
+              "Title": "dbo.Employee.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
-              "ToolTip": "dbo.Employee [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-09T04:33:58.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T04:33:58.49Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "dbo.Employee [Data]",
+              "Title": "dbo.Employee.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql",
-              "ToolTip": "dbo.Employee [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-09T04:26:16.638Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T04:26:16.638Z"
             },
             {
               "$type": "Document",
@@ -76,8 +74,7 @@
               "RelativeToolTip": "APIPractice\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-09T04:26:05.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T04:26:05.013Z"
             },
             {
               "$type": "Document",
@@ -89,8 +86,7 @@
               "RelativeToolTip": "APIPractice\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:26:10.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T05:26:10.049Z"
             },
             {
               "$type": "Document",
@@ -102,8 +98,7 @@
               "RelativeToolTip": "APIPractice\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:53:58.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:53:58.627Z"
             },
             {
               "$type": "Document",
@@ -115,8 +110,7 @@
               "RelativeToolTip": "APIPractice\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAABIAAAAAMzMzMzMwwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:45:04.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:45:04.732Z"
             },
             {
               "$type": "Document",
@@ -128,8 +122,7 @@
               "RelativeToolTip": "APIPractice\\Service\\EmployeeService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA3wB4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:40:17.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:40:17.197Z"
             },
             {
               "$type": "Document",
@@ -139,7 +132,7 @@
               "RelativeDocumentMoniker": "APIPractice\\Repository\\EmployeeRepo.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Repository\\EmployeeRepo.cs",
               "RelativeToolTip": "APIPractice\\Repository\\EmployeeRepo.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAkwHMAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwHMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T07:22:28.303Z",
               "EditorCaption": ""

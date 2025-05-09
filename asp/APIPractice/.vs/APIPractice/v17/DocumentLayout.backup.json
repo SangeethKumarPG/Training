@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|c:\\users\\administrator\\documents\\training\\asp\\apipractice\\apipractice\\repository\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|solutionrelative:apipractice\\repository\\employeerepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|c:\\users\\administrator\\documents\\training\\asp\\apipractice\\apipractice\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|solutionrelative:apipractice\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|c:\\users\\administrator\\documents\\training\\asp\\apipractice\\apipractice\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,10 +33,6 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|c:\\users\\administrator\\documents\\training\\asp\\apipractice\\apipractice\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|solutionrelative:apipractice\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|c:\\users\\administrator\\documents\\training\\asp\\apipractice\\apipractice\\apipractice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
       "RelativeMoniker": "D:0:0:{D4C4C62B-61CE-4E5C-90F7-DCC9D80F611E}|APIPractice\\APIPractice.csproj|solutionrelative:apipractice\\apipractice.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     }
@@ -44,31 +44,29 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.Employee [Data]",
+              "DocumentIndex": 2,
+              "Title": "dbo.Employee.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
-              "ToolTip": "dbo.Employee [Data]",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_COMPANY_431227.MDF/True/SqlTable/dbo.Employee.sql",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-09T04:33:58.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T04:33:58.49Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Employee.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-05-09T04:26:16.638Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "dbo.Employee [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_LocalDB__MSSQLLocalDB/C__USERS_ADMINISTRATOR_DOCUMENTS_EMPLOYEE.MDF/True/SqlTable/dbo.Employee.sql",
-              "ToolTip": "dbo.Employee [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-05-09T04:26:16.638Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\appsettings.json",
               "RelativeDocumentMoniker": "APIPractice\\appsettings.json",
@@ -76,12 +74,11 @@
               "RelativeToolTip": "APIPractice\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-09T04:26:05.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T04:26:05.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Employee.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "APIPractice\\Models\\Employee.cs",
@@ -89,12 +86,11 @@
               "RelativeToolTip": "APIPractice\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T05:26:10.049Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-07T05:26:10.049Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Program.cs",
               "RelativeDocumentMoniker": "APIPractice\\Program.cs",
@@ -102,25 +98,23 @@
               "RelativeToolTip": "APIPractice\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:53:58.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:53:58.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "APIPractice\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "APIPractice\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAABgAAAAAMDMzMzPzvyIAAABGAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAMzMzMzMwwCEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:45:04.732Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:45:04.732Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "EmployeeService.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Service\\EmployeeService.cs",
               "RelativeDocumentMoniker": "APIPractice\\Service\\EmployeeService.cs",
@@ -128,18 +122,17 @@
               "RelativeToolTip": "APIPractice\\Service\\EmployeeService.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA3wB4AAABDAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T08:40:17.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T08:40:17.197Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeRepo.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Repository\\EmployeeRepo.cs",
               "RelativeDocumentMoniker": "APIPractice\\Repository\\EmployeeRepo.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\APIPractice\\APIPractice\\Repository\\EmployeeRepo.cs",
               "RelativeToolTip": "APIPractice\\Repository\\EmployeeRepo.cs",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAowGkAAAA+AAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwHMAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T07:22:28.303Z",
               "EditorCaption": ""
