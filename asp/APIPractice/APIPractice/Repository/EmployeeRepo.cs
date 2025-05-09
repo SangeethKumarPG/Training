@@ -94,6 +94,30 @@ namespace APIPractice.Repository
             return Ok(employees);
         }
 
-            
+        public async Task<IActionResult> InsertNewEmployee(Employee employee)
+        {
+            if (employee == null || employee.Id == 0 || string.IsNullOrWhiteSpace(employee.Name)) {
+                return BadRequest("Invalid Employee Data");
+            }
+            var cmd = "INSERT INTO Employee(Id,Name,Designation,Dept) VALUES (@id,@name,@designation, @dept);";
+            using(var connection = _context.CreateConnection())
+            {
+                await connection.OpenAsync();
+                var command = new SqlCommand(cmd, connection);
+                command.Parameters.AddWithValue("@id", employee.Id);
+                command.Parameters.AddWithValue("@name", employee.Name);
+                command.Parameters.AddWithValue("@designation", employee.Designation);
+                command.Parameters.AddWithValue("@dept", employee.Dept);
+                var queryOutput = await command.ExecuteNonQueryAsync();
+                if(queryOutput > 0)
+                {
+                    return Ok(employee.Id);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError);
+                }   
+            }
+        }
     }
 }

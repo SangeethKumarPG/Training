@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System.Text;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace MVCExampleProject.Controllers
 {
@@ -80,6 +82,41 @@ namespace MVCExampleProject.Controllers
                 }
                 return data;
             }
+        }
+
+        public IActionResult InsertEmployee()
+        {
+            return View();
+        }
+
+        public async Task<dynamic> InsertNewEmployee(string dataString)
+        {
+            string apiEndPoint = "https://localhost:7045/api/v1/InsertNewEmployee";
+            string[] inputArray = dataString.Split("$");
+            var data = "";
+            using(var client = new HttpClient())
+            {
+                string requestContent = JsonConvert.SerializeObject(new
+                {
+                    id = inputArray[0],
+                    name = inputArray[1],
+                    dept= inputArray[2],
+                    designation = inputArray[3]
+                });
+
+                var buffer = Encoding.UTF8.GetBytes(requestContent);
+
+                var byteContent = new ByteArrayContent(buffer);
+
+                byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage result = await client.PostAsync(apiEndPoint, byteContent);
+
+                if (result.IsSuccessStatusCode)
+                {
+                    data = result.Content.ReadAsStringAsync().Result;
+                }
+            }
+            return data;
         }
     }
 }

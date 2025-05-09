@@ -12,6 +12,23 @@
   },
   {
     "ContainingType": "APIPractice.Controllers.EmployeeController",
+    "Method": "InsertNewEmployee",
+    "RelativePath": "api/v1/InsertNewEmployee",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "employee",
+        "Type": "APIPractice.Models.Employee",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "InsertEmployee"
+  },
+  {
+    "ContainingType": "APIPractice.Controllers.EmployeeController",
     "Method": "SearchEmployeeById",
     "RelativePath": "api/v1/SearchEmployeesById/{id}",
     "HttpMethod": "GET",

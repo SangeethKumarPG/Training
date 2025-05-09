@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
               "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-08T06:49:58.243Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "BranchTaskMVC\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAACFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T06:09:48.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T06:09:48.674Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\BranchList.cshtml",
               "ViewState": "AgIAACEAAAAAAAAAAAAAACYAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T06:09:22.349Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T06:09:22.349Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "BranchTaskMVC\\Controllers\\BranchController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAwwDgAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:07:58.09Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T06:07:58.09Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "BranchTaskMVC\\Program.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:05:46.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T06:05:46.733Z"
             }
           ]
         }

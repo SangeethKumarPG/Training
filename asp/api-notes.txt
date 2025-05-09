@@ -269,3 +269,61 @@ For example if we have an EmployeeController with an action called  getData then
 Employee/getData.
 
 We need to define the success callback function and the error callback function for ajax call.
+
+To create a post controller we must use HttpPost attribute instead of HttpGet attribute.
+To get the data from the RequestBody we can use the FromBody attribute in the argument of the controller function.
+
+return StatusCode(StatusCodes.Status500InternalServerError); can be used to send 500 internal server error response.
+
+BadRequest("Invalid Employee Data") can be used to send 400 bad request response.
+We use the ExecuteNonQueryAsync() function to execute the sql command.
+it will return a non negative integer .
+
+if we are integrating it with the mvc app then we need to send the data as json object.
+We can get the data from the frontend as a string and split it into an array of strings.
+then we can use JsonConvert.SerializeObject() to create a json object. Inside the constructor we can initialize the 
+objects required for the json data. 
+eg:
+string requestContent = JsonConvert.SerializeObject(new
+{
+    id = inputArray[0],
+    name = inputArray[1],
+    dept= inputArray[2],
+    designation = inputArray[3]
+});
+
+After this we need to convert this to a byte array. Set the content type in the content header.
+send the request using PostAsync() of the HttpClient object. The arguments of the function are the api endpoint and the bytearray.
+
+Given below is the complete controller code of the mvc.
+public async Task<dynamic> InsertNewEmployee(string dataString)
+{
+    string apiEndPoint = "https://localhost:7045/api/v1/InsertNewEmployee";
+    string[] inputArray = dataString.Split("$");
+    var data = "";
+    using(var client = new HttpClient())
+    {
+        string requestContent = JsonConvert.SerializeObject(new
+        {
+            id = inputArray[0],
+            name = inputArray[1],
+            dept= inputArray[2],
+            designation = inputArray[3]
+        });
+
+        var buffer = Encoding.UTF8.GetBytes(requestContent);
+
+        var byteContent = new ByteArrayContent(buffer);
+
+        byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+        HttpResponseMessage result = await client.PostAsync(apiEndPoint, byteContent);
+
+        if (result.IsSuccessStatusCode)
+        {
+            data = result.Content.ReadAsStringAsync().Result;
+        }
+    }
+    return data;
+}
+
+

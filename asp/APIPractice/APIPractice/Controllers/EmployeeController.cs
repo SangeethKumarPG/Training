@@ -1,4 +1,5 @@
-﻿using APIPractice.Service;
+﻿using APIPractice.Models;
+using APIPractice.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIPractice.Controllers
@@ -26,6 +27,12 @@ namespace APIPractice.Controllers
         public async Task<IActionResult> SearchEmployeeById([FromRoute]string id)
         {
             return await _employeeService.SearchEmployeeById(id);
+        }
+
+        [HttpPost("api/v1/InsertNewEmployee", Name = "InsertEmployee")]
+        public async Task<IActionResult> InsertNewEmployee([FromBody]Employee employee)
+        {
+            return await _employeeService.InsertNewEmployee(employee);
         }
     }
 }

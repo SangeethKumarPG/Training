@@ -1,4 +1,5 @@
-﻿using APIPractice.Repository;
+﻿using APIPractice.Models;
+using APIPractice.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace APIPractice.Service
@@ -23,6 +24,11 @@ namespace APIPractice.Service
         public async Task<IActionResult> SearchEmployeeById(string id)
         {
             return await _employeeRepo.SearchEmployeeById(id);
+        }
+
+        public async Task<IActionResult> InsertNewEmployee(Employee employee)
+        {
+            return await _employeeRepo.InsertNewEmployee(employee);
         }
     }
 }
