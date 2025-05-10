@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\viewemployeereportusingmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\viewemployeereportusingmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\views\\employee\\viewemployeereportusingmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|solutionrelative:mvcexampleproject\\views\\employee\\viewemployeereportusingmodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{3DC9DB3F-8796-497D-AA24-43AF181E4A45}|MVCExampleProject\\MVCExampleProject.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexampleproject\\mvcexampleproject\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,17 +62,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "ViewEmployeeReportUsingModel.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
               "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
-              "ViewState": "AgIAAGgAAACAzMzMzMwnwE4AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAACAzMzMzMwnwE4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-09T10:49:49.399Z",
               "EditorCaption": ""
@@ -153,13 +153,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "MVCExampleProject\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "MVCExampleProject\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAwwIAAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAqwKUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:17:47.668Z",
               "EditorCaption": ""

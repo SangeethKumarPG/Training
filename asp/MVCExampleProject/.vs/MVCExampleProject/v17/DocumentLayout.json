@@ -72,7 +72,7 @@
               "RelativeDocumentMoniker": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
               "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReportUsingModel.cshtml",
-              "ViewState": "AgIAAGsAAACAzMzMzMwnwE4AAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAACAzMzMzMwnwE4AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-09T10:49:49.399Z",
               "EditorCaption": ""
@@ -87,8 +87,7 @@
               "RelativeToolTip": "MVCExampleProject\\Models\\Employee.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-09T10:42:49.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-09T10:42:49.174Z"
             },
             {
               "$type": "Document",
@@ -136,8 +135,7 @@
               "RelativeToolTip": "MVCExampleProject\\Views\\Employee\\ViewEmployeeReport.cshtml",
               "ViewState": "AgIAAGwAAAAAAAAAAAAAAHwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-05T06:40:17.49Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T06:40:17.49Z"
             },
             {
               "$type": "Document",
@@ -159,7 +157,7 @@
               "RelativeDocumentMoniker": "MVCExampleProject\\Controllers\\EmployeeController.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleProject\\MVCExampleProject\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "MVCExampleProject\\Controllers\\EmployeeController.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAqwKUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwKEAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-05T06:17:47.668Z",
               "EditorCaption": ""
@@ -186,8 +184,7 @@
               "RelativeToolTip": "MVCExampleProject\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAUwBkAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-05T05:59:31.657Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-05T05:59:31.657Z"
             },
             {
               "$type": "Document",

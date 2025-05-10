@@ -32,6 +32,14 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXEJyYW5jaExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Administrator/Documents/Training/asp/BranchTaskMVC/BranchTaskMVC/Views/Branch/FindBranchAndBindToModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXEZpbmRCcmFuY2hBbmRCaW5kVG9Nb2RlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Administrator/Documents/Training/asp/BranchTaskMVC/BranchTaskMVC/Views/Branch/LoadReportFromModel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXExvYWRSZXBvcnRGcm9tTW9kZWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Administrator/Documents/Training/asp/BranchTaskMVC/BranchTaskMVC/Views/Branch/SearchBranch.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnJhbmNoXFNlYXJjaEJyYW5jaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

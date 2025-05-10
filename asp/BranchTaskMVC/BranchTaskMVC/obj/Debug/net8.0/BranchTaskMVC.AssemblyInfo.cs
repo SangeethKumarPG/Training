@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BranchTaskMVC")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0acd8dfeecf6f78dcc79e0459f6d596c449c5315")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f5788289eea239516b657fd063113364bcf1a38")]
 [assembly: System.Reflection.AssemblyProductAttribute("BranchTaskMVC")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BranchTaskMVC")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

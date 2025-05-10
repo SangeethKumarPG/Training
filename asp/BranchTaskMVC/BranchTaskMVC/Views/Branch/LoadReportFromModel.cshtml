@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewData["Title"] = "LoadReportFromModel";
+}
+
+<h1>LoadReportFromModel</h1>
+<div class="container">
+    <table class="table table-striped" id="resultTable">
+        <thead>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        window.onload = ()=>{
+            loadDataFromAPI();
+        };
+
+        function bindDataToTable(responseData){
+            if(Array.isArray(responseData) && responseData.length > 0){
+                    const headerRow =document.createElement('tr');
+                    const displayResultTableHeader = document.querySelector('#resultTable thead');
+                   Object.keys(responseData[0]).forEach(key=>{
+                       const th = document.createElement('th');
+                       th.textContent = key;
+                       headerRow.appendChild(th);
+                   });
+                   const displayResultTableBody = document.querySelector('#resultTable tbody');
+                   displayResultTableHeader.appendChild(headerRow);
+                   responseData.forEach(item=>{
+                        const row = document.createElement('tr');
+                        Object.values(item).forEach(values=>{
+                            const cell = document.createElement('td');
+                            cell.textContent = values;
+                            row.appendChild(cell);
+                        });
+                        displayResultTableBody.appendChild(row);
+                   });
+            }
+
+
+        }
+
+        function loadDataFromAPI(){
+            var data = "";
+            $.ajax({
+                type:"GET",
+                url:"/Branch/getBranchesListToModel",
+                async:true,
+                success:function (response){
+                    // data = JSON.parse(response);
+                    bindDataToTable(response);
+                    console.log(response);
+                },
+                error:function (response){
+                    console.log(response);
+                }
+            });
+        }
+
+
+    </script>
+</div>
+

@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewData["Title"] = "FindBranchAndBindToModel";
+}
+
+<h1>FindBranchAndBindToModel</h1>
+
+@{
+    ViewData["Title"] = "SearchBranch";
+}
+
+<h1>SearchBranch</h1>
+<div class="container">
+    <input type="text" id="nameSearch" class="form-control mb-4" oninput="findBranchesAPI();" />
+    <div id="searchResults" class="mb-4">
+    </div>
+    <div class="container">
+        <div>
+            <label for="branchId">Branch Id</label>
+            <input type="text" class="form-control" id="branchId" />
+        </div>
+        <div>
+            <label for="branchName">Branch Name</label>
+            <input type="text" class="form-control" id="branchName" />
+        </div>
+        <div>
+            <label for="branchHead">Branch Head</label>
+            <input type="text" class="form-control" id="branchHead" />
+        </div>
+        <div>
+            <label for="employees">No:of Employees</label>
+            <input type="number" class="form-control" id="employees" />
+        </div>
+    </div>
+
+    <script>
+        function findBranchesAPI(){
+            if(nameSearch.value.length>0){
+
+             var data = "";
+            $.ajax({
+                type:"GET",
+                url:"/Branch/findBranchByNameAndBindToModel",
+                data:{name:nameSearch.value},
+                async:true,
+                success:function(response){
+                    // data = JSON.parse(response);
+                    bindSearchResultsToDiv(response);
+                    console.log(data);
+                },
+                error:function(response){
+                    console.log(response);
+                }
+            });
+            }else{
+                searchResults.innerHTML = "";
+            }
+
+        }
+
+        function fetchBranchById(id){
+            var data = "";
+            $.ajax({
+                type:"GET",
+                url:"/Branch/findBranchById",
+                data:{id},
+                async:true,
+                success:function (response){
+                    data = JSON.parse(response);
+                    console.log(data);
+                    branchId.value = data[0]?.id;
+                    branchName.value = data[0]?.brname;
+                    branchHead.value = data[0]?.head;
+                    employees.value = data[0]?.noofemployees;
+                },
+                error:function (response){
+                    console.log(response);
+                }
+            });
+        }
+
+        function bindSearchResultsToDiv(response){
+            searchResults.innerHTML = "";
+            const resultDiv = document.getElementById('searchResults');
+            if(Array.isArray(response) && response.length > 0){
+                response.forEach(item=>{
+                    const parentContainer = document.createElement('div');
+                    parentContainer.style.backgroundColor = "#f0f0f0";
+                    parentContainer.style.padding = "10px";
+                    parentContainer.style.marginBottom = "5px";
+                    parentContainer.style.cursor = "pointer";
+                    parentContainer.setAttribute("data-id", item.id);
+                    const idSpan = document.createElement('span');
+                    idSpan.textContent = item.id;
+                    parentContainer.appendChild(idSpan);
+                    parentContainer.appendChild(document.createTextNode(" "));
+
+                    const nameSpan = document.createElement('span');
+                    nameSpan.textContent = item.brname;
+                    parentContainer.appendChild(nameSpan);
+                    resultDiv.appendChild(parentContainer);
+                    parentContainer.addEventListener('click', function(){
+                        const id = this.getAttribute("data-id");
+                        fetchBranchById(id);
+                    });
+                });
+            }
+        }
+    </script>
+</div>
+
+

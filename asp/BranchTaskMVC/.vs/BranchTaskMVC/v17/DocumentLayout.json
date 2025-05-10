@@ -3,20 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\searchbranch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\searchbranch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\controllers\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\controllers\\branchcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\branchlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\branchlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\findbranchandbindtomodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\findbranchandbindtomodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\searchbranch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\searchbranch.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\models\\branch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\loadreportfrommodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\loadreportfrommodel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\views\\branch\\branchlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|solutionrelative:branchtaskmvc\\views\\branch\\branchlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{28F41398-7452-4B1E-B500-86ECBE38F5A6}|BranchTaskMVC\\BranchTaskMVC.csproj|c:\\users\\administrator\\documents\\training\\asp\\branchtaskmvc\\branchtaskmvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,44 +42,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "FindBranchAndBindToModel.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\FindBranchAndBindToModel.cshtml",
+              "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Branch\\FindBranchAndBindToModel.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\FindBranchAndBindToModel.cshtml",
+              "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\FindBranchAndBindToModel.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAC8AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T06:18:09.178Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoadReportFromModel.cshtml",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\LoadReportFromModel.cshtml",
+              "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Branch\\LoadReportFromModel.cshtml",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\LoadReportFromModel.cshtml",
+              "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\LoadReportFromModel.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADMAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-10T04:50:15.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Branch.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Models\\Branch.cs",
+              "RelativeDocumentMoniker": "BranchTaskMVC\\Models\\Branch.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Models\\Branch.cs",
+              "RelativeToolTip": "BranchTaskMVC\\Models\\Branch.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T04:45:19.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SearchBranch.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
               "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
               "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\SearchBranch.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAUwGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-05-08T06:49:58.243Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "BranchTaskMVC\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABkAAACFAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwB8AAACdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T06:09:48.674Z"
+              "WhenOpened": "2025-05-08T06:09:48.674Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "BranchList.cshtml",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\BranchList.cshtml",
               "RelativeDocumentMoniker": "BranchTaskMVC\\Views\\Branch\\BranchList.cshtml",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Views\\Branch\\BranchList.cshtml",
               "RelativeToolTip": "BranchTaskMVC\\Views\\Branch\\BranchList.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAACYAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAADEAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-08T06:09:22.349Z"
+              "WhenOpened": "2025-05-08T06:09:22.349Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -77,13 +130,14 @@
               "RelativeDocumentMoniker": "BranchTaskMVC\\Controllers\\BranchController.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Controllers\\BranchController.cs",
               "RelativeToolTip": "BranchTaskMVC\\Controllers\\BranchController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAwwDgAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAADwv0sAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T06:07:58.09Z"
+              "WhenOpened": "2025-05-08T06:07:58.09Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\BranchTaskMVC\\BranchTaskMVC\\Program.cs",
               "RelativeDocumentMoniker": "BranchTaskMVC\\Program.cs",
