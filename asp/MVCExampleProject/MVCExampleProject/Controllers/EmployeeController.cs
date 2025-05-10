@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MVCExampleProject.Models;
 using Newtonsoft.Json;
@@ -163,6 +164,43 @@ namespace MVCExampleProject.Controllers
                 // Return the response data 
                 return employees;
             }
+        }
+
+        public IActionResult InsertEmployeeModel()
+        {
+            return View();
+        }
+
+        public async Task<dynamic> InsertNewEmployeeUsingModel([FromBody]Employee employee)
+        {
+            string apiEndPoint = "https://localhost:7045/api/v1/InsertNewEmployee";
+            
+            var data = "";
+            using (var client = new HttpClient())
+            {
+                var apiData = new
+                {
+                    id = employee.EmpCode,
+                    name = employee.EmpName,
+                    designation = employee.Position,
+                    dept = employee.Department
+                };
+
+                string requestContent = JsonConvert.SerializeObject(apiData);
+
+                var buffer = Encoding.UTF8.GetBytes(requestContent);
+
+                var byteContent = new ByteArrayContent(buffer);
+
+                byteContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+                HttpResponseMessage result = await client.PostAsync(apiEndPoint, byteContent);
+
+                if (result.IsSuccessStatusCode)
+                {
+                    data = result.Content.ReadAsStringAsync().Result;
+                }
+            }
+            return data;
         }
 
     }
