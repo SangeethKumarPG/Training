@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\controllers\\databaseconnectiontestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\controllers\\databaseconnectiontestcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\model\\departmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\model\\departmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\dataaccess\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\model\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\mvcexamplewithoracle.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\mvcexamplewithoracle.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|c:\\users\\administrator\\documents\\training\\asp\\mvcexamplewithoracle\\mvcexamplewithoracle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1B523F8-55F6-4AC5-A94E-4A8ADB8EF858}|MVCExampleWithOracle\\MVCExampleWithOracle.csproj|solutionrelative:mvcexamplewithoracle\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DepartmentDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Model\\DepartmentDTO.cs",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\Model\\DepartmentDTO.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Model\\DepartmentDTO.cs",
+              "RelativeToolTip": "MVCExampleWithOracle\\Model\\DepartmentDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T06:45:01.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Model\\Employee.cs",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\Model\\Employee.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Model\\Employee.cs",
+              "RelativeToolTip": "MVCExampleWithOracle\\Model\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:51:29.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataBaseConnectionTestController.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Controllers\\DataBaseConnectionTestController.cs",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\Controllers\\DataBaseConnectionTestController.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Controllers\\DataBaseConnectionTestController.cs",
+              "RelativeToolTip": "MVCExampleWithOracle\\Controllers\\DataBaseConnectionTestController.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAUwDsAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:45:22.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Program.cs",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\Program.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\Program.cs",
+              "RelativeToolTip": "MVCExampleWithOracle\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:44:15.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DataContext.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\DataAccess\\DataContext.cs",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\DataAccess\\DataContext.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\DataAccess\\DataContext.cs",
+              "RelativeToolTip": "MVCExampleWithOracle\\DataAccess\\DataContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-12T04:40:29.243Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MVCExampleWithOracle",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\MVCExampleWithOracle.csproj",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\MVCExampleWithOracle.csproj",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\MVCExampleWithOracle.csproj",
+              "RelativeToolTip": "MVCExampleWithOracle\\MVCExampleWithOracle.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-12T04:39:14.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\appsettings.json",
+              "RelativeDocumentMoniker": "MVCExampleWithOracle\\appsettings.json",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\Training\\asp\\MVCExampleWithOracle\\MVCExampleWithOracle\\appsettings.json",
+              "RelativeToolTip": "MVCExampleWithOracle\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAhwAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-12T04:19:24.363Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

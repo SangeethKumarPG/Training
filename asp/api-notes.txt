@@ -10,7 +10,7 @@ First create a new ASP.NET Core Web API project in Visual Studio when creating u
 
 Then right click on the solution and select Add -> New Project.
 Select Class library and Name it as "Business" and click on Add.
-Do the same for DataAccess project.
+Do the same for DataAccess project.  
 
 Both the projects should be in the WebAPI project.
 inside the Business project create a new Folder called Service. Inside this create a service class. Make sure that the class is public.
