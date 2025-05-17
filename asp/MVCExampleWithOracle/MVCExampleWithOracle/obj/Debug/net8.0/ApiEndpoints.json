@@ -1,6 +1,23 @@
 [
   {
     "ContainingType": "MVCExampleWithOracle.Controllers.DataBaseConnectionTestController",
+    "Method": "AddDepartment",
+    "RelativePath": "api/v1/AddDept",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "MVCExampleWithOracle.Model.DepartmentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [],
+    "EndpointName": "AddDept"
+  },
+  {
+    "ContainingType": "MVCExampleWithOracle.Controllers.DataBaseConnectionTestController",
     "Method": "GetAllEmployees",
     "RelativePath": "api/v1/GetAllEmployees",
     "HttpMethod": "GET",

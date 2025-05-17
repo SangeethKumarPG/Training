@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVCExampleWithOracle")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6a39ce68cdc90e9a4ed92b5c3aced4e39d35fa9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2dffbed0dfaf0df395e4fdccc05c20bb4a752f9e")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVCExampleWithOracle")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVCExampleWithOracle")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

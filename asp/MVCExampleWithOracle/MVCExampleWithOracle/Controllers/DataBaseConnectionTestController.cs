@@ -35,30 +35,36 @@ namespace MVCExampleWithOracle.Controllers
             
         }
 
-        [HttpPost("/api/v1/AddDept", Name="AddDept")]
-        public async Task<IActionResult> AddDepartment([FromBody]DepartmentDTO dto)
+        [HttpPost("/api/v1/AddDept", Name = "AddDept")]
+        public async Task<IActionResult> AddDepartment([FromBody] DepartmentDTO dto)
         {
-            if (dto == null) {
+            if (dto == null)
+            {
                 return BadRequest("Department data is required");
             }
-            try {
-                using (IDbConnection connection = _dataContext.CreateConnection()) {
-                    await connection.Open();
-                    using(var command = new OracleCommand("ADD_DEPT", connection))
+            try
+            {
+                using (var connection = (OracleConnection)_dataContext.CreateConnection())
+                {
+                    await connection.OpenAsync();
+                    using (var command = new OracleCommand("ADD_DEPT", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("IN_DEPT_NO", OracleDbType.Int32).Value = dto.deptno;
                         command.Parameters.Add("IN_DEPT_NAME", OracleDbType.Varchar2).Value = dto.dname;
                         command.Parameters.Add("IN_LOC", OracleDbType.Varchar2).Value = dto.loc;
 
-                        await command.ExecuteNonQuery();
+                        await command.ExecuteNonQueryAsync();
 
                     }
                 }
                 return Ok("Department added successfully!");
-            } catch (Exception ex) {
+            }
+            catch (Exception ex)
+            {
                 return StatusCode(500, $"Internal server error: {ex.Message}");
             }
+        }
 
     }
 }

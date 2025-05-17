@@ -18,6 +18,38 @@
         }
       }
     },
+    "/api/v1/AddDept": {
+      "post": {
+        "tags": [
+          "DataBaseConnectionTest"
+        ],
+        "operationId": "AddDept",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/DepartmentDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -60,6 +92,24 @@
   },
   "components": {
     "schemas": {
+      "DepartmentDTO": {
+        "type": "object",
+        "properties": {
+          "deptno": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dname": {
+            "type": "string",
+            "nullable": true
+          },
+          "loc": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "WeatherForecast": {
         "type": "object",
         "properties": {
