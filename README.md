@@ -1,3 +1,4 @@
+## Oracle Notes
 % is a wild card operator to match the pattern. If you put % after a character, it will show all the rows which starts with that particular column. If you put % first and place it before a character it will show all the rows with characters that end with that character. **We should use LIKE keyword for comparing patterns**
 
 Aliasing is used to change the column name of the output of the query. 
