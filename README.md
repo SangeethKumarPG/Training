@@ -1,5 +1,4 @@
-## ORACLE SQL NOTES
-
+## Oracle Notes
 % is a wild card operator to match the pattern. If you put % after a character, it will show all the rows which starts with that particular column. If you put % first and place it before a character it will show all the rows with characters that end with that character. **We should use LIKE keyword for comparing patterns**
 
 Aliasing is used to change the column name of the output of the query. 
@@ -336,3 +335,187 @@ eg:
 We can use LEFT or RIGHT join with the USING.
 
 If you don't have any matching column names you can specify column names separated by commas in the USING like **USING(col1, col2) .** 
+
+**EQUIJOIN** is similar to inner join but we use the equality operator '=' for the joining condition. eg:
+
+`SELECT * FROM emp e, dept d WHERE e.deptno = d.deptno;` 
+
+Suppose you want to determine the grade of all the employees according to the salary. If you have a job\_grade table like :
+
+```javaScript
+CREATE TABLE job_grade
+(Grade_level varchar(2) not null,
+lowest_sal number not null,
+highest_sal number not null);
+```
+
+and we insert values into the table like:
+
+```javaScript
+INSERT ALL
+ INTO job_grade
+ VALUES ('A', 0, 1000)
+ INTO job_grade
+ VALUES ('B', 1001, 2000)
+ INTO job_grade
+ VALUES ('C', 2001, 3000)
+ INTO job_grade
+ VALUES ('D', 3001, 4000)
+ INTO job_grade
+ VALUES ('E', 4001, 5000)
+SELECT * FROM DUAL;
+```
+
+We can determine the grade of the employee from this. But the salary value in the employee table is not present in the job\_grade table. It has a range of salary. So we need to use the BETWEEN operator to determine weather a salary falls in the given range.
+
+We can use a query like:
+
+`SELECT e.ename, e.sal, j.grade_level FROM emp e JOIN job_grade j ON e.sal BETWEEN j.lowest_sal and j.highest_sal;`
+
+In the above example there is no common column which we can match to join both the tables such joins are called **NON-EQUIJOINS.** 
+
+CASE statement is equivalent to the IF THEN ELSE in other programming languages. It is used to conditionally display output based on the input values. We can use CASE with an sql query to return value based on a particular column value.
+
+eg:
+
+```javaScript
+SELECT ename, job, (CASE job
+WHEN 'PRESIDENT' THEN 'big shot'
+WHEN 'MANAGER' THEN 'decides the pay'
+WHEN 'ANALYST' THEN 'good at math'
+WHEN 'CLERK' THEN 'hardworking'
+ELSE 'no comment' 
+END) as "COMMENT"
+FROM emp;
+```
+
+We can wrap the CASE statements in parenthesis. We end the CASE statement with the END keyword. We can omit the ELSE condition if we don't want it.
+
+**NOTE** : If you need to check an expression inside the CASE _we don't need to specify the column name along with the CASE keyword. Instead use the column name in the WHEN portion._
+
+eg:
+
+```javaScript
+SELECT ename, sal, CASE
+    WHEN sal >= 3000 THEN 'big shot'
+    WHEN sal < 3000 THEN 'earn more money'
+    END as "COMMENT" FROM emp;
+```
+
+  
+If i want to display the total count as a column along with the table we can use a subquery like:
+
+```javaScript
+SELECT b.*,(SELECT count(*) FROM bricks) as "TOTAL_BRICKS_IN_TABLE" FROM bricks b;
+```
+
+We cannot directly use count() with the select statements. 
+
+If we want to display the count of each different colour of bricks we need to create a co-related subquery. So the query will be like 
+
+```javaScript
+SELECT b.*,(SELECT count(*) FROM bricks) as "COUNT" FROM bricks b;
+```
+
+If we want to find the total weight of the bricks by it's colour we can use 
+
+```javaScript
+SELECT b.*,(SELECT count(*) FROM bricks) as "COUNT" FROM bricks b;
+```
+
+An easier way to perform the same operation is by using the **OVER** clause. The syntax is 
+
+`SELECT aggregate_function()<space>over() FROM table;`   
+eg:
+
+```javaScript
+SELECT count(*) over() FROM bricks;
+```
+
+This will output 6 rows with a single column with the values as 6\. We can select other rows of the table along with this like:
+  
+  
+```javaScript
+SELECT b.*, count(*) over() as "TOTAL_COUNT" FROM bricks b;
+```
+
+Another name for analytical functions is window functions. Inside the over clause we specify the window. If we leave it empty we are saying that the entire table is the window.
+
+```javaScript
+SELECT b.*, count(*) over(partition by colour) as "COUNT_BY_COLOUR" FROM bricks b;
+```
+
+This will provide a window(group) for blue green and red, The aggregate function count will be applied over each window. This is essentially the same as subquery but much more cleaner. We can perform any aggregate operation over the window like
+
+```javaScript
+SELECT b.*, sum(weight) over(partition by colour) as "TOTAL_WEIGHT_BY_COLOUR" FROM bricks b;
+```
+
+The **PARTITION BY** clause let's us create windows.
+
+We can have disparate columns in the result by using different windows like:
+
+```javaScript
+SELECT b.*, SUM(weight) OVER (partition by shape) as SUM_BY_SHAPE,
+SUM(weight) OVER(partition by colour) as SUM_BY_COLOUR
+FROM bricks b;
+```
+
+This allows us to have different kinds of groupings in the same query. 
+
+The **ORDER BY clause inside the OVER()** function let's us create running totals(sum of current row+ sum of previous rows) for example :
+
+```javaScript
+SELECT b.*, SUM(weight) OVER (partition by shape) as SUM_BY_SHAPE,
+SUM(weight) OVER(partition by colour) as SUM_BY_COLOUR
+FROM bricks b;
+```
+
+Here we are creating a window which is partitioned by brick\_id thus sum of each brick is calculated by the sum function. The last row will have the total weight. By default the order by selects row in ascending order.
+
+We can combine the partition by with order by clause inside the over function. For example if we want to find the running weight by colour we can use a query like :
+
+```javaScript
+SELECT b.*, SUM(weight) 
+OVER(partition by colour order by brick_id) as RUNNING_WT_BY_COLOR 
+FROM bricks b ORDER BY colour;
+```
+
+NOTE : You cannot use group by inside the OVER() function.
+
+When you use order by inside the over() function oracle will automatically add **range between unbounded preceding and current row** along with that. Which means that the specified column value is checked against the current and all of the previous rows. By doing this we must make sure that the specified column value is unique for all rows, other wise values from other rows( rows after the current) row will be considered for calculating the running total. To prevent this we can use **rows between unbounded preceding and current** for example:
+
+```javaScript
+SELECT b.*, SUM(weight)
+OVER(order by weight rows between unbounded preceding and current row) 
+as RUNNING_TOTAL_WT FROM bricks b ORDER BY weight;
+```
+
+**By this way we can prevent columns with duplicate values affecting the running total calculation.** 
+This makes sure that each individual row is considered for calculation without considering the duplicates. 
+
+You can adjust the sliding window size by specifying the number of preceding rows. For example :
+
+```javaScript
+SELECT b.*, SUM(weight) OVER(order by weight rows between 1 preceding and current row) as LIMITED_WINDOW_TOTAL
+FROM bricks b ORDER BY weight;
+```
+
+We can specify any number of rows instead of 1\. 
+
+You cannot use the having clause with the sliding window for filtering for this you need to use a subquery to specify the select condition of the window function. Use the alias of the window function in the outer query with where clause for filtering for example:
+
+```javaScript
+SELECT * FROM (SELECT b.*, COUNT(*) OVER(partition by colour) colour_count
+FROM bricks b
+) WHERE colour_count >=2;
+```
+
+**NOTE** : The database processes analytical functions after the where clause so you can't use something like:
+
+```javaScript
+select colour from bricks
+where  count(*) over ( partition by colour ) >= 2;
+```
+
+This will throw an error.
