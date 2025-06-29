@@ -1,4 +1,4 @@
-## Oracle Notes
+## ORACLE NOTES
 % is a wild card operator to match the pattern. If you put % after a character, it will show all the rows which starts with that particular column. If you put % first and place it before a character it will show all the rows with characters that end with that character. **We should use LIKE keyword for comparing patterns**
 
 Aliasing is used to change the column name of the output of the query. 
@@ -519,3 +519,260 @@ where  count(*) over ( partition by colour ) >= 2;
 ```
 
 This will throw an error.
+
+Rank, Dense\_rank and row\_number() functions are used to provide an id for each row. 
+
+**Rank** : Rows with the same value in the order by have the same rank. The next row after a tie has the value of N, where N is it's position in the dataset. Just like rank in statistics. 
+
+**Dense\_rank** : Rows with the same value in the order by have the same, rank but there are no gaps in the ranks.
+
+**Row\_number** : each row has a new value. Increased by 1 by default. each row will have a unique number.
+
+```javaScript
+select brick_id, weight,
+    row_number() over(order by weight) rn,
+    rank() over(order by weight) rk,
+    dense_rank() over(order by weight) dr
+FROM bricks;
+```
+
+Consider the above query. This will assign a rank, dense\_rank and row\_number based on the weight column. You don't need to pass any argument to these functions.
+
+The **lead()** and **lag()** are another type of analytical functions which let's us get the next row value of a specified column and previous row value of a specified column. 
+
+  
+You need to pass the column name as argument to these functions. also we need to use the over() function. eg:
+
+```javaScript
+select b.*, lag(shape) over(order by brick_id) prev_shape,
+    lead(shape) over(order by brick_id) next_shape 
+from bricks b;
+```
+
+this displays the previous and next values of the shapes in columns prev\_shape and next\_shape respectively. **The lag functions output for the first row of a column will be null. and the output of the lead function for the last row of a column will be null.** 
+
+**The first\_value(column) returns the first value of a column for all the rows, the last\_value(column) returns the current value of the column.** consider the below query:
+
+```javaScript
+select b.*,
+       first_value ( weight ) over (
+         order by brick_id
+       ) first_weight_by_id,
+       last_value ( weight ) over (
+         order by brick_id
+       ) last_weight_by_id
+from   bricks b;
+```
+
+The first\_value() will always return the value of the first row for all the rows. The last\_value will return the current value
+
+for all the rows. In the above case the weight of the first row is 1, so if we use the first\_value function and apply it over a window function to display this as a new column we will see 1 for all the rows. But if we use the same thing for last\_value the value of the current row (weight) will be displayed for each respective row in the query result as a column **This is because the default windowing clause stops at current row**. To actually get the last value we can use : 
+
+```javaScript
+range between current row and unbounded following
+```
+
+inside the window function. 
+
+```javaScript
+select b.*,
+       first_value ( weight ) over (
+         order by brick_id
+       ) first_weight_by_id,
+       last_value ( weight ) over (
+         order by brick_id
+         range between current row and unbounded following
+       ) last_weight_by_id
+from   bricks b;
+```
+
+This query will provide the desired result as it will display the value of last row for all the rows. 
+
+Table is an object in the database that stores data. 
+
+**Primary Key** : Is used to uniquely identify each row in a table. If a column is a primary key the data in the column must not repeat. It must not be NULL. It can also be a combination of columns. The primary key should be well thought out early on. Creating a primary key is not mandatory to create a table. 
+
+To create a table we use the syntax.
+
+`CREATE TABLE table_name(column_name DATA_TYPE [constraints]);` 
+
+consider the below example:
+
+```javaScript
+CREATE TABLE stores (
+    store_id NUMBER NOT NULL,
+    city VARCHAR2(50)
+);
+```
+
+`DESC table_name;` is used to show the description about the table. 
+
+To insert values into the table we use the INSERT command. The syntax is :
+
+`INSERT INTO table_name(column1, column2,...) VALUES (value1, value2..);`   
+eg:  
+`INSERT INTO stores(store_id, city) VALUES (1, 'San Francisco');  
+`As soon as we execute the above statement the data is saved into the table. This is called an **auto/implied commit.** In some systems the commit will not happen automatically, we need to manually perform commit either after each transaction or after a series of transactions. We use the **COMMIT;** keyword for that.  
+ If we want to insert multiple rows at a time we use the **INSERT ALL** command.   
+syntax :
+
+```javaScript
+INSERT ALL
+    INTO table_name(column_1, column_2...) VALUES (value1, value2)
+    INTO table_name(column_1, column_2...) VALUES (value1, value2)
+SELECT * FROM DUAL;
+```
+
+**NOTE** : **We need some kind of select statement when using this type of insert. Typically we use select \* from dual, which does not necessarily do anything.** 
+
+Example for this is 
+
+```javaScript
+INSERT ALL
+    INTO stores (store_id, city) VALUES(4, 'Philadelphia')
+    INTO stores (store_id, city) VALUES(5, 'Boston')
+    INTO stores (store_id, city) VALUES(6, 'Seattle')
+SELECT * FROM DUAL;
+```
+
+The above method only works with oracle databases.  
+**NOTE : If any of the statement in the insert all fails no record will be inserted.** 
+
+The CONSTRAINT object is used to create a constraint while creating a table. The syntax for creating a constraint is :
+
+```javaScript
+CREATE TABLE(
+    column_name datatype,
+    ......
+    CONSTRAINT constaint_name PRIMARY KEY(column_name)
+);
+```
+
+The name to the key is mandatory. The primary key will enforce uniqueness in the table data. Consider the below example.
+
+```javaScript
+CREATE TABLE PRODUCTS(
+    product_id NUMBER NOT NULL,
+    name VARCHAR(50),
+    product_cost NUMBER(5,2),
+    product_retail NUMBER(5,2),
+    product_type VARCHAR(10),
+    store_id NUMBER NOT NULL,
+    CONSTRAINT product_pk PRIMARY KEY(product_id)
+);
+```
+
+The **INSERT ALL** command can be used to insert values into multiple tables at a time. This is much faster when compared into inserting into multiple tables separately. The syntax is :
+
+```javaScript
+INSERT ALL
+    INTO destination_tbl_1 (column1, column2..) VALUES (column1_of_tbl_4, column2_of_tbl_4)
+    INTO destination_tbl_2(column1, column2..) VALUES (column1_of_tbl_4, column2_of_tbl_4)
+    INTO destination_tbl_3(column1, column2..) VALUES (column1_of_tbl_4, column2_of_tbl_4)
+SELECT column1_of_tbl_4, column2_of_tbl_4 FROM tbl_4;
+```
+
+**NOTE : date is not a valid column name is SQL because it is a datatype.** 
+**NOTE : The DESCRIBE keyword is used to get a description of a table in oracle.** 
+
+The following is an example of multi table insert:
+
+```javaScript
+CREATE TABLE destination_tbl_1
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_1_pk PRIMARY KEY(id)
+);
+ 
+CREATE TABLE destination_tbl_2
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_2_pk PRIMARY KEY(id)
+);
+ 
+CREATE TABLE destination_tbl_3
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_3_pk PRIMARY KEY(id)
+);
+ 
+INSERT ALL 
+    INTO destination_tbl_1 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    INTO destination_tbl_2 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    INTO destination_tbl_3 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+SELECT employee_id, first_name, last_name, hire_date FROM employees;
+```
+
+```javaScript
+SELECT * FROM destination_tbl_1;
+SELECT * FROM destination_tbl_2;
+SELECT * FROM destination_tbl_3;
+ 
+COMMIT;
+```
+
+The above 3 select statements will return the same query result. The INSERT ALL statement is more powerful than this, because we can conditionally insert data to multiple tables. eg:
+
+```javaScript
+INSERT ALL 
+    WHEN salary <= 1500 THEN
+        INTO destination_tbl_1 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    WHEN salary BETWEEN 1501 AND 2500 THEN
+        INTO destination_tbl_2 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    ELSE
+        INTO destination_tbl_3 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+SELECT employee_id, first_name, last_name, hire_date, salary FROM employees;
+COMMIT;
+```
+
+**NOTE: We need to select the column if we are using the column in our condition in the above example we are using the salary column to check the condition.** 
+
+**NOTE : If we are inserting to all column of a table, we don't need to specify the column names. But the order of the columns need to matching to the values you are inserting.**   
+eg : `INSERT INTO products VALUES(1004, '', 4.00, 8.00, 'clothing',3);` In the above query we are inserting empty product name to the products table where we haven't specified the NOT NULL condition for the NAME column. To fix this, we use the **ALTER TABLE** command. The syntax is:
+
+` **ALTER TABLE table_name MODIFY column_name data_type constraints;**`
+
+We can use the above syntax to modify the column like: 
+
+`ALTER TABLE products MODIFY name VARCHAR2 NOT NULL;  
+`This will not work because the column already has null values in it, so in-order to modify it we need to delete that entire row and alter it. 
+
+```javaScript
+DELETE FROM products WHERE name IS NULL;
+ 
+ALTER TABLE products MODIFY name VARCHAR2(50) NOT NULL;
+```
+
+After altering the column the above query to insert empty name will not work. 
+
+We can alter multiple columns of a table at a time using the below syntax:
+
+```javaScript
+ALTER TABLE table_name MODIFY ( column_name1 data_type constraints,
+column_name2 data_type constraints,
+column_name3 data_type constrains);
+```
+
+eg:
+
+```javaScript
+ALTER TABLE products MODIFY(
+    product_cost NUMBER(5,2) NOT NULL,
+    product_retail NUMBER(5,2) NOT NULL
+);
+```
+
+To rename a particular column of a table we use the **RENAME** **COLUMN** command instead of **MODIFY**. The syntax is :
+
+`ALTER TABLE table_name RENAME column_name TO new_column_name;`   
+eg:
+
+```javaScript
+ALTER TABLE products RENAME COLUMN name TO product_name;
+```
