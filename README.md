@@ -776,3 +776,208 @@ eg:
 ```javaScript
 ALTER TABLE products RENAME COLUMN name TO product_name;
 ```
+
+We can create a table from the SELECT query by using CREATE + SELECT syntax like:
+
+`CREATE TABLE new_table_name AS SELECT column1, column2, column3... FROM table_name;`   
+By this method all the features of the original table along with the data will be copied over to the new table. For example if we want to create a copy of our employee table we can use:
+
+```javaScript
+CREATE TABLE emp AS 
+SELECT e.EMPLOYEE_ID, e.FIRST_NAME, 
+e.LAST_NAME, e.SALARY, e.HIRE_DATE FROM employees e;
+```
+
+This will have the selected columns from the employee table.
+
+We can also add columns to an existing table using the ALTER TABLE ADD command. syntax is:
+
+`ALTER TABLE table_name ADD column_name data_type constaints;`   
+**NOTE : When adding a column with NOT NULL constraint to an existing table there must not be any data in the existing table.** 
+For example the below query will not work:
+
+```javaScript
+ALTER TABLE emp ADD store_id NUMBER NOT NULL;
+```
+
+If we remove the NOT NULL constraint the column will be added. 
+
+The UPDATE command is used to update the data of existing columns in a table. The syntax is like:
+
+`UPDATE table_name SET column = value WHERE condition;`   
+If you don't use the WHERE clause all the data in that column will be updated. example:
+
+```javaScript
+UPDATE emp SET store_id = 3 WHERE last_name IN ('King', 'Blake','Clark');
+```
+
+```javaScript
+// REFER LATER
+UPDATE emp e SET job = (SELECT j.JOB_TITLE from jobs j 
+LEFT JOIN employees em ON em.job_id = j.job_id 
+WHERE e.EMPLOYEE_ID = em.EMPLOYEE_ID) WHERE job IS NULL AND EXISTS
+(
+    SELECT 1 FROM employees em 
+    JOIN jobs j ON em.job_id = j.JOB_ID
+    WHERE em.EMPLOYEE_ID = e.EMPLOYEE_ID
+);
+// REFER LATER
+```
+
+To update the the particular column of a table we can also use:
+
+```javaScript
+UPDATE emp e SET e.store_id = 
+(
+    CASE
+        WHEN e.JOB LIKE 'Presi%' OR  e.job LIKE '%Vice%' THEN 3
+        WHEN e.JOB = 'Sales Representative' THEN 4
+        WHEN e.JOB = 'Purchasing Clerk' THEN 3
+        ELSE 2
+    END 
+);
+```
+
+  
+We can modify/add constraints to a column of a table using **ALTER TABLE table\_name MODIFY()** funciton. eg:
+
+```javaScript
+ALTER TABLE emp MODIFY(
+    store_id NUMBER NOT NULL
+);
+```
+
+**NOTE: When you create a table using select the constraints like primary key and foreign key will not be copied.**
+
+The MERGE statement helps to insert or update data in a table depending upon weather the data already exists in the table. This is similar to INSERT INTO SELECT statement. The syntax is :
+
+```javaScript
+MERGE INTO destination_table USING source_table ON(condition) WHEN MATCHED THEN 
+UPDATE SET source_table.column1 = destination_table.column1,
+source_table.column2 = destination_table.column2,
+source_table.column3 = destination_table.column3;
+WHEN NOT MATCHED THEN
+INSERT (destination_table.column1, destination_table.column2, destination_table.column3)
+VALUES (source_table.column1, source_table.column2, source_table.column3);
+```
+
+Like this we can perform the insertion when the data doesn't exist and update the data if it already exists. For example:
+
+```javaScript
+MERGE INTO existing_customers c USING 
+new_customers n ON (c.customer_id = n.customer_id)
+WHEN MATCHED THEN
+UPDATE SET c.first_name = n.first_name, c.last_name = n.last_name, 
+c.address_state = n.address_state, c.email_address = n.email_address
+WHEN NOT MATCHED THEN
+INSERT (customer_id, first_name, last_name, address_state, email_address)
+VALUES(n.customer_id, n.first_name, n.last_name, n.address_state, n.email_address);
+```
+
+**NOTE: This is specific to oracle.** 
+Even if you run the statement multiple times you won't get any error. The matching rows will be updated but the non matching columns will not be inserted again. You can add delete conditions in between the MERGE. 
+
+```javaScript
+MERGE INTO existing_customers c USING 
+new_customers n ON (c.customer_id = n.customer_id)
+WHEN MATCHED THEN
+UPDATE SET c.first_name = n.first_name, c.last_name = n.last_name, 
+c.address_state = n.address_state, c.email_address = n.email_address
+DELETE WHERE c.first_name = 'John'
+WHEN NOT MATCHED THEN
+INSERT (customer_id, first_name, last_name, address_state, email_address)
+VALUES(n.customer_id, n.first_name, n.last_name, n.address_state, n.email_address);
+```
+
+Sequence is a counter which keeps track of a numeric sequence. A sequence can be used as a tool to auto increment values when data is inserted to a table. To create a sequence we use the syntax:
+
+```javaScript
+CREATE SEQUENCE sequence_name_seq 
+    MINVALUE minimum_value
+    MAXVALUE maximum_value 
+    START WITH starting_number
+    INCREMENT BY value
+    CACHE value[NOCACHE];
+```
+
+By default if you don't provide any value for maximum value it will automatically use 99999999999999999999999 which is a very large number. The **START WITH** can be any value you can choose to start the sequence from. INCREMENT BY is the value which you choose to increment the next value generated the sequence. **CACHE** is specified to let the oracle know that that many next values should be in the memory. **NOCACHE** means that there will be no cache, but using cache is recommended because it is more performant. The default value of CACHE is 20\. Example of creating a sequence.
+
+```javaScript
+CREATE SEQUENCE product_seq
+   MINVALUE 1
+   MAXVALUE 999999999999999999999999999
+   START WITH 1
+   INCREMENT BY 1
+   CACHE 20;
+```
+
+To get the next value of the sequence we use the **sequence\_name.NEXTVAL;** statement. You cannot directly use this command. If you need to see the next value you can use   
+`SELECT sequence_name.NEXTVAL FROM dual;`   
+When caching is used the above statement will not consistently return a value in order. To alter a sequence we use the following command:
+
+`ALTER SEQUENCE sequence_name ATTRIBUTE;` 
+
+Example:
+
+`ALTER SEQUENCE product_seq NOCACHE;`   
+If you disable caching every time you create a value from the sequence always a new value will be created. It will not go back to the previous generated value(when directly selecting from dual).
+
+**NOTE**: you cannot alter the starting value of a sequence after creating it.
+
+Example usage of sequence:
+
+```javaScript
+CREATE SEQUENCE product_seq
+   MINVALUE 1001
+   MAXVALUE 9999999999999999999999999999
+   START WITH 1004 
+   INCREMENT BY 1
+   CACHE 20;
+```
+
+When inserting data:
+
+```javaScript
+INSERT INTO products(product_id, product_name, product_cost, product_retail, product_type, store_id)
+VALUES (product_seq.NEXTVAL, 'Pepsodent Tooth Paste', 2.00, 3.50, 'hygene',3);
+```
+
+This will automatically increment values of the store\_id column whenever we insert a value, we don't need to manually increment the count.  
+**NOTE:** When inserting values to a table which already has values to the column which you want to fill with the sequence, you must specify the MINVALUE as the largest value(last value) of that column, otherwise you will run into errors which prevents you from inserting data.
+
+To delete a row from a table we use the syntax:
+
+`DELETE FROM table_name WHERE condition;` 
+
+eg:  
+`DELETE FROM departments_copy WHERE department_id=69;`  
+**If you don't specify the condition it will delete all the rows in the table**. You can use multiple rows at a time when appropriate condition is used. 
+
+We cannot delete rows if they are referenced by other tables using foreign key constraints. When you try to delete these rows it will show you a constraint violation error. To delete such a row first we need to drop the constraint. To drop a constraint we use the syntax is :
+
+`ALTER TABLE table_name DROP CONSTRAINT constrain_name; `   
+The user\_constraints table will have all the constraints of all the tables in oracle. You need to filter out the rows by using the particular table name to get the constraints of that particular table.
+
+eg:
+
+```javaScript
+SELECT uc.* FROM user_constraints uc WHERE uc.table_name = 'EMPLOYEES';
+```
+
+After this we can drop constraints using:  
+`ALTER TABLE employees DROP CONSTRAINT EMP_DEPT_FK;` 
+
+**NOTE: This action is permanent. Even if you roll back the constraint will not be restored.**
+
+**The TRUNCATE command removes all the data from the table. It does not remove the table.**
+
+The syntax is `TRUNCATE TABLE table_name;`   
+example:
+
+```javaScript
+TRUNCATE TABLE departments_copy;
+```
+
+The DROP TABLE command removes the table from the database. This operation is not permanent unless you COMMIT the transaction. The syntax is :
+
+` DROP TABLE table_name;` 
