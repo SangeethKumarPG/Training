@@ -1,4 +1,4 @@
-## ORACLE NOTES
+## SQL NOTES
 % is a wild card operator to match the pattern. If you put % after a character, it will show all the rows which starts with that particular column. If you put % first and place it before a character it will show all the rows with characters that end with that character. **We should use LIKE keyword for comparing patterns**
 
 Aliasing is used to change the column name of the output of the query. 
@@ -981,3 +981,256 @@ TRUNCATE TABLE departments_copy;
 The DROP TABLE command removes the table from the database. This operation is not permanent unless you COMMIT the transaction. The syntax is :
 
 ` DROP TABLE table_name;` 
+
+An index is a database object which is used to search for things in the database faster. A table with well defined indexes will be much faster to query when compared to tables with no indexes. All relational databases support the use of indexes. It is like an index of a book, if you have an index you can search for things easily otherwise you will have to scan the entire book to find the information you need. In tables with less number of rows there is not much performance improvement when using indexes. We choose columns of the table to be indexes. These should be important columns which are queried often. Indexes are stored like objects in the database. The syntax is:
+
+`CREATE [UNIQUE] INDEX index_name ON table_name (column1, column2,..) [COMPUTE STATISTIC];`   
+Commonly we use the **idx** in the index name as prefix or postfix. Eg:  
+`CREATE INDEX first_name_idx ON employees(first_name); `   
+We can combine multiple columns to create indexes like:
+
+```javaScript
+CREATE INDEX fname_job_hdate_idx ON employees(first_name, job_id, hire_date);
+```
+
+**NOTE:** Creating indexes takes up space in the database. You don't need to index every column of every table in the database.   
+You can also create unique indexes, note that when creating unique indexes the data in the column should be unique otherwise we will get an error.   
+To drop an index we use `DROP INDEX index_name;`   
+eg:  
+`DROP INDEX first_name_idx;`   
+The compute statistic keyword can be used when creating indexes, by this way additional information about the indexed column will be stored in the database. This way the queries become much smarter. i.e, the oracle query optimiser finds the best way possible to execute queries on such indexes. You can add COMPUTE STATISTIC to an already existing index by using the following syntax:
+
+`ALTER INTEX index_name REBUILD COMPUTE STATISTICS;`   
+
+To check for constraints in a particular table we use the all\_constraints and all\_cons\_columns table eg:
+
+```javaScript
+SELECT ac.constraint_name, acc.column_name FROM 
+all_constraints ac JOIN all_cons_columns acc ON ac.CONSTRAINT_NAME = acc.CONSTRAINT_NAME
+WHERE ac.table_name = 'STORES'
+AND ac.constraint_type = 'P';
+```
+
+The constraint\_type specified 'P' is for primary key.
+
+**ROWID** is a pseudo column, which you can use with any query. Each record in each table has a unique rowid in string format. We can use the ROWID to delete duplicate records from a table. For example consider the stores\_copy table which has duplicate records. To get these records we can use :  
+`SELECT MIN(rowid) FROM stores_copy GROUP BY store_id, city;`   
+This will show the lowest rowid for each combination. We can delete these by:
+
+```javaScript
+DELETE FROM stores_copy WHERE rowid NOT IN(SELECT MIN(rowid) FROM stores_copy GROUP BY store_id, city);
+```
+
+**You must use the MIN() on rowid otherwise all the rowids of all the rows will be used and all the rows will be deleted. NOTE that even though all there are duplicate records the rowids for each row is unique.** You must use GROUP BY on all the column combinations that has duplicate data. For example:
+
+```javaScript
+INSERT INTO stores_copy(store_id, city) VALUES(5, 'Houston');
+INSERT INTO stores_copy(store_id, city) VALUES(6, 'Dallas');
+```
+
+We insert 2 new records whose store\_id is already in the table but the city is unique. To view these records we can use:
+
+```javaScript
+SELECT store_id, count(*) FROM stores_copy GROUP BY store_id;
+```
+
+And to delete them we can use:
+
+```javaScript
+DELETE FROM stores_copy WHERE rowid NOT IN (SELECT MIN(rowid) FROM stores_copy GROUP BY store_id);
+```
+
+After deleting the duplicate records we can set a primary key on store\_id using:
+
+```javaScript
+ALTER TABLE stores_copy ADD CONSTRAINT store_id_pk PRIMARY KEY (store_id);
+```
+
+To get the already existing indexes of a table we use query the **user\_indexes** table by filtering the **table\_name** for example:
+
+```javaScript
+SELECT index_name, index_type, uniqueness 
+FROM user_indexes WHERE table_name = 'STORES_COPY';
+```
+
+**NOTE** : **When you create a PRIMARY KEY on a table it will automatically create a UNIQUE INDEX on the column.** 
+
+```javaScript
+CREATE UNIQUE INDEX store_copy_id_unq_idx ON stores_copy (store_id) COMPUTE STATISTICS;
+```
+
+This will give us an error like "such column list is already indexed"
+
+**ROWNUM**  is a useful object which assigns a unique number to all the rows sequentially when used with an SQL statement. We can use this to limit the number of rows returned by a select statement like:
+
+```javaScript
+SELECT * FROM all_tables WHERE ROWNUM < 10;
+```
+
+Which will show only 9 records. This will reduce the load on the database when there are many rows to be returned. note that this will return the first N records.  
+SYSTEM TABLES are tables that are managed by the oracle system. You don't need to update or delete from such tables unless it is absolutely necessary. You can query these and find out more information about your database. 
+
+* **ALL\_TABLES :** Has all the tables in the database.  
+`SELECT * FROM all_tables;`  
+Based on the size of the database this query may take a while. We can search for our tables in this table by using the table\_name. **NOTE: You must always use capital letters for table names when searching in system tables.** eg:  
+`SELECT * FROM all_tables WHERE ROWNUM < 10 AND table_name = 'EMPLOYEES';`
+
+* **ALL\_TAB\_COLUMNS :** Gives all the columns of a table. We can filter this table by the table\_name. eg: `SELECT * FROM all_tab_columns WHERE ROWNUM < 30 AND table_name = 'EMPLOYEES';`
+* **ALL\_OBJECTS :** Will show all the objects in the database. We can filter this by using the **object\_type** column. eg:  
+`SELECT * FROM all_objects WHERE ROWNUM < 50 AND object_type='TABLE';  
+`We can change the object\_type to **'INDEX'** to get all the indexes in the database. We can further filter out the data by **OBJECT\_NAME** column.
+* **ALL\_SYNONYMS :** Synonyms are nick names that you can assign to a table. You can assign a synonym to a table and query that table using a synonym. PUBLIC SYNONYMS are synonyms that can be used by everyone. eg: `CREATE PUBLIC SYNONYM emp_table FOR employees;  
+`_To create public synonyms you must have sufficient privileges(ADMIN)._ You can filter this table by using the synonym\_name column eg: `SELECT * FROM ALL_SYNONYMS sn WHERE sn.synonym_name = 'EMP_TABLE';`
+
+**VIEW** is a type of database object. All relational databases has views. A view is can be thought of as a stored or a named query. If you have a long complex complex query if you want to save it we can use views. For example :
+
+```javaScript
+SELECT * FROM employees emp LEFT JOIN jobs j ON emp.job_id = j.job_id WHERE lower(j.job_title) LIKE '%manager';
+```
+
+To create a view we use the syntax :   
+`CREATE VIEW view_name AS SELECT QUERY;  
+`The above query can be converted into a view like:
+
+```javaScript
+CREATE VIEW manager_v AS SELECT emp.*, j.job_title, j.min_salary,
+j.max_salary FROM employees emp 
+LEFT JOIN jobs j ON emp.job_id = j.job_id
+WHERE LOWER(j.job_title) LIKE '%manager';
+```
+
+**NOTE : A view must not have duplicate columns, if you have duplicate columns you must use different aliases for each column**.   
+It is a normal convention to use **'\_v'** for view names.   
+To find the views created by the user we must filter the **user\_objects** table using the **object\_type**. 
+
+eg:  
+`SELECT * FROM user_objects WHERE object_type = 'VIEW' AND object_name LIKE 'MANAGER%';`   
+We can also specify the owner of the view using OWNER column of the ALL\_OBJECTS table.   
+To get the version of the database we can use the SYS.V\_$VERSION eg:  
+`SELECT * FROM SYS.V_$VERSION;  
+`We can drop views using `DROP VIEW view_name;`   
+To get the maximum salary of employee in each department we can use the following query:
+
+```javaScript
+SELECT emp.employee_id, emp.first_name, emp.last_name, emp.department_id,
+emp.salary, d.DEPARTMENT_NAME, d.LOCATION_ID,
+l.CITY
+FROM employees emp JOIN departments d 
+ON emp.department_id = d.department_id
+JOIN locations l
+ON d.location_id = l.location_id WHERE
+emp.salary = (SELECT MAX(emp2.salary) FROM employees emp2 
+WHERE emp2.department_id = emp.department_id);
+```
+
+We can create a view from this query like:
+
+  
+```javaScript
+CREATE VIEW max_salary_v AS 
+SELECT emp.employee_id, emp.first_name || emp.last_name as "name",
+emp.department_id, d.department_name, d.location_id, l.city
+FROM employees emp
+JOIN departments d on emp.department_id = d.department_id
+JOIN locations l on d.location_id = l.location_id
+WHERE emp.salary = (SELECT MAX(emp2.salary) FROM employees emp2 WHERE
+emp2.department_id = emp.department_id);
+```
+
+The above query can also be written as :
+
+```javaScript
+SELECT e1.* FROM employees e1 
+INNER JOIN (SELECT department_id, MAX(salary) as salary FROM employees GROUP BY
+department_id) e2 ON e1.department_id = e2.department_id
+AND e1.salary = e2.salary;
+```
+
+We can join select query results to tables like shown in the above. Note that in the above query we cannot select more than 2 columns in the group by query, that is why we are using joins. Also we need to properly filter out the records using the join conditions, here we are joining based on the department\_id and the salary, if we don't use the salary column 
+
+all the records of the employees table will be shown in the result. As mentioned previously the column names in the view should be unique. That is why we are selecting only the columns of the e1\. Alternatively we can use aliases for the column names.   
+**UNION: Is used to combine the rows of two queries.** The result of the union will not have duplicate rows. Also when performing union both the select statements should have same columns. eg:
+
+```javaScript
+SELECT e1.* FROM employees e1 
+INNER JOIN (SELECT department_id, MAX(salary) as salary FROM employees GROUP BY
+department_id) e2 ON e1.department_id = e2.department_id
+AND e1.salary = e2.salary
+UNION
+SELECT * FROM employees;
+```
+
+**UNION ALL :** Works same as union except it will show all the rows of both tables, it won't filter out duplicate rows.
+
+**MINUS :** It is used to remove the records from one query based on the second query. For example:
+
+```javaScript
+SELECT e1.* FROM employees e1 
+INNER JOIN (SELECT department_id, MAX(salary) as salary FROM employees GROUP BY
+department_id) e2 ON e1.department_id = e2.department_id
+AND e1.salary = e2.salary
+MINUS
+SELECT * FROM employees WHERE JOB_ID ='SA_MAN';
+```
+
+This will remove the record where job\_id is 'SA\_MAN' from the result of the first query.  
+We can easily change the view which is already created using: `CREATE OR REPLACE VIEW view_name AS QUERY;` We can also easily drop views using DROP VIEW view\_name command.
+
+**DCL : Data Control Language** mostly used by database administrators. Administrators create users or schemas. Users and schemas are essentially the same. Each user will have access to the tables, views etc in his specific schema. Only admins can access the data from other users or schema. One user can access the schema corresponding to other user only by the approval of admin. The most commonly used commands are GRANT, REVOKE and ROLE. GRANT is used to grand users the privilege to access the data in their schema by other users. A user can grant permission to query the data in their schema by other users. ROLE is a set of privileges assigned to a user. The syntax for granting privileges is like:
+
+`GRANT DML_OPERATION ON TABLE/VIEW TO USER/SCHEMA;`   
+The DML can be select, insert, update, delete etc.   
+eg:  
+Suppose there is an employee schema, If the employee want to give access to the User3 he should use:
+
+`GRANT SELECT ON Products TO User3;`   
+For the User3 to be able to query a table in the 
+
+employees schema he should use:
+
+`SELECT * FROM employee.products;`   
+To GRANT multiple privileges at the same time we can use:  
+`GRANT SELECT, UPDATE, DELETE ON Products To User3, User4;`   
+To revoke the privileges we use the following syntax:
+
+`REVOKE DML_COMMAND ON TABLE/VIEW FROM USER/SCHEMA;`   
+Eg:  
+`REVOKE SELECT, UPDATE, DELETE ON Products FROM USER3, USER4;`   
+The database administrator can grant certain privileges to certain roles using:
+
+`CREATE ROLE role_name;`
+
+`GRANT Privilege TO role_name;`   
+We can assign a user a particular role using:  
+`ALTER USER user_name default ROLE role_name;` 
+
+**To get the current user/schema who is logged in to the database we use the following command:** 
+`**SHOW USER;**`   
+Alternatively we can use:  
+`SELECT sys_context('USERENV', 'CURRENT_SCHEMA') FROM dual;`   
+NOTE that the sys\_context is a function, also we should pass the arguments in capital letters inside single quotes.  
+To get the current database container:  
+`SELECT SYS_CONTEXT('USERENV','CON_NAME') FROM dual;`   
+To switch to container database:
+
+```javaScript
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+```
+
+To switch to pluggable database:  
+`ALTER SESSION SET CONTAINER = ORCLPDB1;  
+`To Create a pluggable database from docker container use the container id and run `docker exec -it 4530b80baa63 /bin/bash` Then run `sqlplus / as sysdba` then
+
+```javaScript
+CREATE PLUGGABLE DATABASE PDB1
+   ADMIN USER pdb_admin IDENTIFIED BY pdb_admin_password
+   ROLES = (CONNECT, RESOURCE)
+   DEFAULT TABLESPACE users
+   DATAFILE '/opt/oracle/oradata/ORCLCDB/pdb1/pdb1_users01.dbf'
+   SIZE 100M AUTOEXTEND ON
+   FILE_NAME_CONVERT = ('/opt/oracle/oradata/ORCLCDB/pdbseed/', '/opt/oracle/oradata/ORCLCDB/pdb1/');
+```
+
+After creating the pluggable database we need to open the pluggable database using:  
+`ALTER PLUGGABLE DATABASE PDB1 OPEN;`   
+After this we can switch to the pluggable database and execute queries.
