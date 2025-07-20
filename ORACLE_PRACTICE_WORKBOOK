@@ -1,0 +1,865 @@
+variable var_text VARCHAR2(30);
+
+set autoprint on;
+DECLARE
+    v_text VARCHAR(30);
+BEGIN
+    :var_text := 'Hello PLSQL';
+    v_text := :var_text;
+    dbms_output.put_line('Bind variable value is : '||v_text);
+    dbms_output.put_line('The original variable is : '||:var_text);
+END;
+
+print var_text;
+
+variable var_sql NUMBER;
+
+BEGIN
+    :var_sql := 100;
+END;
+
+SELECT * FROM employees e WHERE e.EMPLOYEE_ID =:var_sql;
+
+SELECT * FROM EMPLOYEES;
+
+DESC employees;
+
+DECLARE
+    v_number NUMBER := 30;
+BEGIN
+    IF v_number < 10 THEN 
+        dbms_output.put_line('The number is less than 10');
+    ELSIF v_number < 20 THEN 
+        dbms_output.put_line('The number is less than 20');
+    ELSIF v_number < 30 THEN 
+        dbms_output.put_line('The number is less than 30');
+    ELSE
+        dbms_output.put_line('The number is greater than or equal to 30');
+    END IF;
+END;
+
+DECLARE 
+    v_number NUMBER := 10;
+    v_name VARCHAR2(30) := 'Carol';
+BEGIN
+    IF v_number = 10 AND v_name = 'Carol' THEN
+        dbms_output.put_line('The number is 10 and the name is Carol');
+    END IF;
+END;
+
+DECLARE
+    v_job_code VARCHAR2(10) := 'SA_MAN';
+    v_salary_increase NUMBER;
+BEGIN
+    v_salary_increase := CASE v_job_code
+        WHEN 'SA_MAN' THEN 0.2
+        WHEN 'SA_REP' THEN 0.3
+        ELSE 0
+        END;
+    dbms_output.put_line('The salary increase percentage is '||v_salary_increase);
+END;
+
+DECLARE
+    v_job_code VARCHAR2(30) := 'IT_PROG';
+    v_salary_increase NUMBER;
+BEGIN
+    CASE 
+        WHEN v_job_code = 'SA_MAN' THEN 
+            v_salary_increase := 0.2;
+            dbms_output.put_line('The salary increase percentage for Sales Man is '||v_salary_increase);
+        WHEN v_job_code IN('SA_REP', 'IT_PROG') THEN 
+            v_salary_increase := 0.3;
+            dbms_output.put_line('The salary increase percentage for SA_REP/ IT_PROG is '||v_salary_increase);
+        ELSE 
+            v_salary_increase := 0;
+            dbms_output.put_line('The salary increase percentage is '||v_salary_increase);
+    END CASE;
+END;
+
+DECLARE
+    v_counter NUMBER(2) := 1;
+BEGIN
+    LOOP
+        dbms_output.put_line('My counter is : '|| v_counter);
+        v_counter:= v_counter + 1;  
+        EXIT WHEN v_counter = 10;
+    END LOOP;
+END;
+
+
+DECLARE
+    v_counter NUMBER(2) := 1;
+BEGIN
+    WHILE v_counter <= 10 LOOP
+        dbms_output.put_line('My counter is : '||v_counter);
+        v_counter := v_counter + 1;
+        EXIT WHEN v_counter = 3;
+    END LOOP;
+END;
+
+BEGIN
+    FOR i IN 1..10 LOOP
+        dbms_output.put_line('My counter is '||i);
+    END LOOP;
+END;
+
+BEGIN 
+    FOR i in REVERSE 1..3 LOOP
+        dbms_output.put_line('My counter is : '||i);
+    END LOOP;
+END;
+
+DECLARE
+    v_inner NUMBER := 1;
+BEGIN
+    FOR v_outer in 1..5 LOOP
+        dbms_output.put_line('My outer value is : '||v_outer);
+        v_inner :=1;
+        LOOP 
+            v_inner := v_inner + 1;
+            dbms_output.put_line('My inner value is : '||v_inner);
+            EXIT WHEN v_inner * v_outer >= 15;
+        END LOOP;
+    END LOOP;
+END;
+
+DECLARE
+    v_inner NUMBER := 1;
+BEGIN
+    <<outer_loop>>
+    FOR v_outer in 1..5 LOOP
+        dbms_output.put_line('My outer value is : '||v_outer);
+        <<inner_loop>>
+        LOOP 
+            v_inner := v_inner + 1;
+            dbms_output.put_line('My inner value is : '||v_inner);
+            EXIT outer_loop WHEN v_inner * v_outer >= 15;
+        END LOOP inner_loop;
+    END LOOP outer_loop;
+END;
+
+DECLARE
+    v_inner NUMBER := 1;
+BEGIN
+    <<outer_loop>>
+    FOR v_outer in 1..10 LOOP
+        dbms_output.put_line('My outer value is : '||v_outer);
+        v_inner := 1;
+        <<inner_loop>>
+        LOOP
+            v_inner := v_inner + 1;
+            CONTINUE outer_loop WHEN v_inner = 10;
+            dbms_output.put_line('My inner value is : '|| v_inner);
+        END LOOP;
+    END LOOP;
+END;
+
+    SELECT * FROM DEPARTMENTS;
+
+CREATE TABLE stores (
+    store_id NUMBER NOT NULL,
+    city VARCHAR2(50)
+);
+
+select * from stores;
+
+DESC stores;
+
+DESC employees;
+
+SELECT * FROM stores;
+
+INSERT INTO stores(store_id, city) VALUES (1, 'San Francisco');
+INSERT INTO stores(store_id, city) VALUES (2, 'New York City');
+
+INSERT INTO stores(store_id, city) VALUES (3, 'Chicago');
+
+INSERT ALL
+    INTO stores (store_id, city) VALUES(4, 'Philadelphia')
+    INTO stores (store_id, city) VALUES(5, 'Boston')
+    INTO stores (store_id, city) VALUES(6, 'Seattle')
+SELECT * FROM DUAL;
+
+SELECT * FROM stores;
+
+COMMIT;
+
+CREATE TABLE PRODUCTS(
+    product_id NUMBER NOT NULL,
+    name VARCHAR(50),
+    product_cost NUMBER(5,2),
+    product_retail NUMBER(5,2),
+    product_type VARCHAR(10),
+    store_id NUMBER NOT NULL,
+    CONSTRAINT product_pk PRIMARY KEY(product_id)
+);
+
+COMMIT;
+
+INSERT ALL
+    INTO products(product_id, name, product_cost, product_retail, product_type, store_id)
+        VALUES(1001, 'Colgate Tooth Paste', 2.25, 5.57, 'hygene', 2)
+    
+    INTO products(product_id, name, product_cost, product_retail, product_type, store_id)
+        VALUES(1002, 'Colgate Tooth Paste', 2.25, 5.57, 'hygene', 2)
+    
+    INTO products(product_id, name, product_cost, product_retail, product_type, store_id)
+        VALUES(1003, 'Lysterine Mouth Wash', 1.75, 4.81, 'hygene', 3)
+SELECT * FROM DUAL;
+
+COMMIT;
+
+SELECT * FROM products;
+
+SELECT * FROM employees;
+describe employees;
+
+CREATE TABLE destination_tbl_1
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_1_pk PRIMARY KEY(id)
+);
+
+
+CREATE TABLE destination_tbl_2
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_2_pk PRIMARY KEY(id)
+);
+
+CREATE TABLE destination_tbl_3
+(
+    id NUMBER(6) NOT NULL,
+    name VARCHAR2(50) NOT NULL,
+    hire_date DATE NOT NULL,
+    CONSTRAINT destination_tbl_3_pk PRIMARY KEY(id)
+);
+
+INSERT ALL 
+    INTO destination_tbl_1 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    INTO destination_tbl_2 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    INTO destination_tbl_3 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+SELECT employee_id, first_name, last_name, hire_date FROM employees;
+
+SELECT * FROM destination_tbl_1;
+SELECT * FROM destination_tbl_2;
+SELECT * FROM destination_tbl_3;
+
+COMMIT;
+
+DROP TABLE destination_tbl_1;
+DROP TABLE destination_tbl_2;
+DROP TABLE destination_tbl_3;
+
+COMMIT;
+
+INSERT ALL 
+    WHEN salary <= 1500 THEN
+        INTO destination_tbl_1 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    WHEN salary BETWEEN 1501 AND 2500 THEN
+        INTO destination_tbl_2 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+    ELSE
+        INTO destination_tbl_3 (id, name, hire_date) VALUES(employee_id, first_name||' '||last_name, hire_date)
+SELECT employee_id, first_name, last_name, hire_date, salary FROM employees;
+COMMIT;
+
+SELECT * FROM DESTINATION_TBL_1;
+SELECT * FROM destination_tbl_2;
+
+SELECT * FROM destination_tbl_3;
+
+SELECT * FROM products;
+DESCRIBE products;
+
+INSERT INTO products VALUES(1004, '', 4.00, 8.00, 'clothing',3);
+
+COMMIT;
+
+DELETE FROM products WHERE name IS NULL;
+
+ALTER TABLE products MODIFY name VARCHAR2(50) NOT NULL;
+COMMIT;
+
+DESCRIBE PRODUCTS;
+
+ALTER TABLE products MODIFY(
+    product_cost NUMBER(5,2) NOT NULL,
+    product_retail NUMBER(5,2) NOT NULL
+);
+
+COMMIT;
+
+ALTER TABLE products RENAME COLUMN name TO product_name;
+
+COMMIT;
+
+CREATE TABLE emp AS 
+SELECT e.EMPLOYEE_ID, e.FIRST_NAME, 
+e.LAST_NAME, e.SALARY, e.HIRE_DATE FROM employees e;
+
+SELECT * FROM emp;
+
+COMMIT;
+
+DESCRIBE emp;
+
+ALTER TABLE emp ADD store_id NUMBER;
+COMMIT;
+
+UPDATE emp SET store_id = 3 WHERE last_name IN ('King', 'Blake','Clark');
+
+DESCRIBE employees;
+DESCRIBE jobs;
+
+ALTER TABLE emp ADD job VARCHAR2(35);
+
+UPDATE emp e SET job = (SELECT j.JOB_TITLE FROM jobs j
+     LEFT JOIN employees em ON j.JOB_ID = em.JOB_ID
+     WHERE e.employee_id = em.employee_id
+) WHERE job IS NULL AND EXISTS (
+    SELECT 1 FROM employees em JOIN jobs j ON em.JOB_ID = j.job_id 
+    WHERE em.employee_id = e.employee_id
+);
+
+
+UPDATE emp e SET e.store_id = 
+(
+    CASE
+        WHEN e.JOB LIKE 'Presi%' OR  e.job LIKE '%Vice%' THEN 3
+        WHEN e.JOB = 'Sales Representative' THEN 4
+        WHEN e.JOB = 'Purchasing Clerk' THEN 3
+        ELSE 2
+    END 
+);
+
+COMMIT;
+
+SELECT * FROM emp;
+
+ALTER TABLE emp MODIFY(
+    store_id NUMBER NOT NULL
+);
+
+DESC emp;
+
+COMMIT;
+
+CREATE TABLE existing_customers (
+  customer_id NUMBER(5),
+  first_name VARCHAR2(100),
+  last_name VARCHAR2(100),
+  address_state VARCHAR2(10),
+  email_address VARCHAR2(350),
+  CONSTRAINT old_pk_cust PRIMARY KEY (customer_id)
+);
+
+BEGIN
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address)
+	VALUES (1, 'Teresa', 'Hudson', 'NY', 'thudson@abc.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (2, 'Fred', 'Montgomery', 'CA', 'fmont@gmail.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (3, 'Lois', 'Lawson', 'OR', 'lois_law@outlook.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (4, 'Alice', 'Perry', 'SC', 'aliceperry');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (5, 'Ralph', 'Montgomery', 'TX', 'ralph_mont25@gmail.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (6, 'Dorothy', 'Armstrong', 'OR', 'abc123@abc.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (7, 'Fred', 'Wallace', 'NY', 'wallacef@testwebsite.co.uk');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (8, 'Joseph', 'Bell', 'FL', 'jbell@comm.edu');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (9, 'Lois', 'Martinez', 'CALIF', 'loismar@awe.com');
+	INSERT INTO existing_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (10, 'Robert', 'Rice', 'IN', 'robrice123');
+END;
+
+SELECT * FROM existing_customers;
+
+
+CREATE TABLE  new_customers(
+  customer_id NUMBER(5),
+  first_name VARCHAR2(100),
+  last_name VARCHAR2(100),
+  address_state VARCHAR2(10),
+  email_address VARCHAR2(350)
+);
+
+BEGIN
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (15, 'John', 'Stock', 'ND', 'js1980@outlook.com');
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (12, 'Joseph', 'Bell', 'OR', 'thebell@yahoo.com');
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (3, 'Lois', 'Lawson', 'WA', 'lois_law@outlook.com');
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (8, 'Joseph', 'Bell', 'FL', 'jbell@gmail.com');
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (1, 'Teresa', 'Hudson', 'NY', 'thudson@abc.com');
+	INSERT INTO new_customers (customer_id, first_name, last_name, address_state, email_address) 
+	VALUES (4, 'Alice', 'Howard', 'SC', 'aliceperry@gmail.com');
+END;
+
+
+MERGE INTO existing_customers c USING 
+new_customers n ON (c.customer_id = n.customer_id)
+WHEN MATCHED THEN
+UPDATE SET c.first_name = n.first_name, c.last_name = n.last_name, 
+c.address_state = n.address_state, c.email_address = n.email_address
+WHEN NOT MATCHED THEN
+INSERT (customer_id, first_name, last_name, address_state, email_address)
+VALUES(n.customer_id, n.first_name, n.last_name, n.address_state, n.email_address);
+
+SELECT * FROM existing_customers;
+
+COMMIT;
+
+MERGE INTO existing_customers c USING 
+new_customers n ON (c.customer_id = n.customer_id)
+WHEN MATCHED THEN
+UPDATE SET c.first_name = n.first_name, c.last_name = n.last_name, 
+c.address_state = n.address_state, c.email_address = n.email_address
+DELETE WHERE c.first_name = 'John'
+WHEN NOT MATCHED THEN
+INSERT (customer_id, first_name, last_name, address_state, email_address)
+VALUES(n.customer_id, n.first_name, n.last_name, n.address_state, n.email_address);
+
+ROLLBACK;
+
+CREATE SEQUENCE product_seq
+   MINVALUE 1
+   MAXVALUE 999999999999999999999999999
+   START WITH 1
+   INCREMENT BY 1
+   CACHE 20;
+
+
+SELECT product_seq.NEXTVAL FROM DUAL;
+
+DROP SEQUENCE product_seq;
+
+CREATE SEQUENCE product_seq
+   MINVALUE 1001
+   MAXVALUE 9999999999999999999999999999
+   START WITH 1004 
+   INCREMENT BY 1
+   CACHE 20;
+
+SELECT * FROM products;
+
+INSERT INTO products(product_id, product_name, product_cost, product_retail, product_type, store_id)
+VALUES (product_seq.NEXTVAL, 'Pepsodent Tooth Paste', 2.00, 3.50, 'hygene',3);
+
+COMMIT;
+
+SELECT * FROM departments;
+
+INSERT INTO departments(department_id, department_name, location_id)
+VALUES (69, 'misc', 1700);
+
+DELETE FROM departments WHERE department_id=69;
+
+CREATE TABLE departments_copy AS SELECT * FROM departments;
+
+DELETE FROM departments_copy WHERE department_id=69;
+
+SELECT * FROM departments_copy;
+
+DELETE FROM DEPARTMENTS_COPY;
+
+DROP TABLE departments_copy;
+
+COMMIT;
+
+CREATE TABLE employees_copy AS SELECT * FROM employees;
+
+DESC employees_copy;
+
+SELECT uc.* FROM user_constraints uc WHERE uc.table_name = 'EMPLOYEES';
+
+ROLLBACK;
+
+ALTER TABLE employees DROP CONSTRAINT EMP_DEPT_FK;
+
+SELECT uc.* FROM user_constraints uc WHERE uc.table_name = 'EMPLOYEES';
+
+ROLLBACK;
+
+CREATE TABLE departments_copy AS SELECT * FROM departments;
+SELECT * FROM departments_copy;
+
+TRUNCATE TABLE departments_copy;
+
+SELECT * FROM departments_copy;
+
+DROP TABLE departments_copy;
+
+COMMIT;
+
+SELECT * FROM employees WHERE first_name='John';
+
+CREATE INDEX first_name_idx ON employees(first_name);
+
+CREATE INDEX fname_job_hdate_idx ON employees(first_name, job_id, hire_date);
+
+DROP INDEX first_name_idx;
+
+DROP INDEX fname_job_hdate_idx;
+
+ALTER INDEX first_name_idx REBUILD COMPUTE STATISTICS;
+
+SELECT * FROM stores;
+
+CREATE UNIQUE INDEX store_unq_idx ON stores(store_id) COMPUTE STATISTICS;
+
+ALTER TABLE stores MODIFY store_id NUMBER PRIMARY KEY;
+
+SELECT uc.* FROM user_constraints uc WHERE uc.TABLE_NAME = 'STORES';
+
+SELECT ac.constraint_name, acc.column_name FROM 
+all_constraints ac JOIN all_cons_columns acc ON ac.CONSTRAINT_NAME = acc.CONSTRAINT_NAME
+WHERE ac.table_name = 'STORES'
+AND ac.constraint_type = 'P';
+
+DESC stores;
+
+COMMIT;
+
+SELECT st.*, st.rowid FROM stores st;
+
+SELECT MIN(st.rowid) FROM stores st;
+
+CREATE TABLE stores_copy AS SELECT * FROM stores;
+
+SELECT * FROM stores_copy;
+
+COMMIT;
+
+select ac.constraint_name, acc.column_name, ac.CONSTRAINT_TYPE FROM all_constraints ac JOIN all_cons_columns acc ON ac.CONSTRAINT_NAME = acc.CONSTRAINT_NAME
+WHERE ac.TABLE_NAME = 'STORES_COPY';
+
+INSERT INTO stores_copy(store_id, city) VALUES(5, 'Houston');
+INSERT INTO stores_copy(store_id, city) VALUES(6, 'Dallas');
+INSERT INTO stores_copy(store_id, city) VALUES(7, 'San Antonio');
+INSERT INTO stores_copy(store_id, city) VALUES(7, 'San Antonio');
+INSERT INTO stores_copy(store_id, city) VALUES(5, 'Boston');
+
+SELECT * FROM stores_copy;
+
+SELECT store_id, city, count(*) FROM stores_copy GROUP BY store_id, city ORDER BY COUNT(*);
+
+SELECT MIN(rowid) FROM stores_copy GROUP BY store_id, city;
+
+DELETE FROM stores_copy WHERE rowid NOT IN(SELECT MIN(rowid) FROM stores_copy GROUP BY store_id, city);
+
+SELECT * FROM stores_copy;
+
+INSERT INTO stores_copy(store_id, city) VALUES(5, 'Houston');
+INSERT INTO stores_copy(store_id, city) VALUES(6, 'Dallas');
+
+SELECT store_id, count(*) FROM stores_copy GROUP BY store_id;
+
+DELETE FROM stores_copy WHERE rowid NOT IN (SELECT MIN(rowid) FROM stores_copy GROUP BY store_id);
+
+COMMIT;
+
+ALTER TABLE stores_copy ADD CONSTRAINT store_id_pk PRIMARY KEY (store_id);
+
+DROP INDEX store_id_unq_idx;
+
+SELECT index_name, index_type, uniqueness 
+FROM user_indexes WHERE table_name = 'STORES_COPY';
+
+CREATE UNIQUE INDEX store_copy_id_unq_idx ON stores_copy (store_id) COMPUTE STATISTICS;
+
+COMMIT;
+
+SELECT * FROM all_tables WHERE ROWNUM < 10 AND table_name = 'EMPLOYEES';
+
+SELECT * FROM all_tab_columns WHERE ROWNUM < 30 AND table_name = 'EMPLOYEES';
+
+SELECT * FROM all_objects WHERE ROWNUM < 50 AND object_type='TABLE';
+
+CREATE PUBLIC SYNONYM emp_table FOR employees;
+
+SELECT * FROM ALL_SYNONYMS sn WHERE sn.synonym_name = 'EMP_TABLE';
+
+SELECT * FROM employees emp LEFT JOIN jobs j ON emp.job_id = j.job_id WHERE lower(j.job_title) LIKE '%manager';
+
+SELECT * FROM jobs;
+
+CREATE VIEW manager_v AS SELECT emp.*, j.job_id as "job_id_jobs",j.job_title, j.min_salary,
+j.max_salary FROM employees emp 
+LEFT JOIN jobs j ON emp.job_id = j.job_id
+WHERE LOWER(j.job_title) LIKE '%manager';
+
+SELECT * FROM manager_v;
+
+SELECT * FROM user_objects WHERE object_type = 'VIEW' AND object_name LIKE 'MANAGER%';
+
+SELECT * FROM SYS.V_$VERSION;
+
+SELECT emp.employee_id, emp.first_name, emp.last_name, emp.department_id,
+emp.salary, d.DEPARTMENT_NAME, d.LOCATION_ID,
+l.CITY
+FROM employees emp JOIN departments d 
+ON emp.department_id = d.department_id
+JOIN locations l
+ON d.location_id = l.location_id WHERE
+emp.salary = (SELECT MAX(emp2.salary) FROM employees emp2 
+WHERE emp2.department_id = emp.department_id);
+
+CREATE VIEW max_salary_v AS 
+SELECT emp.employee_id, emp.first_name || emp.last_name as "name",
+emp.department_id, d.department_name, d.location_id, l.city
+FROM employees emp
+JOIN departments d on emp.department_id = d.department_id
+JOIN locations l on d.location_id = l.location_id
+WHERE emp.salary = (SELECT MAX(emp2.salary) FROM employees emp2 WHERE
+emp2.department_id = emp.department_id);
+
+SELECT * FROM max_salary_v;
+
+COMMIT;
+
+
+SELECT e.department_id, MAX(e.salary)
+FROM employees e GROUP BY e.department_id;
+
+SELECT e1.* FROM employees e1 
+INNER JOIN (SELECT department_id, MAX(salary) as salary FROM employees GROUP BY
+department_id) e2 ON e1.department_id = e2.department_id
+AND e1.salary = e2.salary
+
+
+SELECT * FROM MAX_SALARY_V;
+
+
+SELECT e1.* FROM employees e1 
+INNER JOIN (SELECT department_id, MAX(salary) as salary FROM employees GROUP BY
+department_id) e2 ON e1.department_id = e2.department_id
+AND e1.salary = e2.salary
+MINUS
+SELECT * FROM employees WHERE JOB_ID ='SA_MAN';
+
+SHOW user;
+
+SELECT sys_context('USERENV', 'CURRENT_SCHEMA') FROM dual;
+
+CREATE TABLE Students (
+    student_no NUMBER PRIMARY KEY,
+    student_name VARCHAR2(50) NOT NULL
+);
+
+CREATE TABLE Departments (
+    dept_id NUMBER PRIMARY KEY,
+    dept_name VARCHAR2(50) NOT NULL
+);
+
+CREATE TABLE Courses (
+    course_no VARCHAR2(10) PRIMARY KEY,
+    dept_id NUMBER NOT NULL,
+    credits NUMBER NOT NULL,
+    FOREIGN KEY (dept_id) REFERENCES Departments(dept_id)
+);
+
+CREATE TABLE Student_Enrollment (
+    student_no NUMBER NOT NULL,
+    course_no VARCHAR2(10) NOT NULL,
+    grade NUMBER NOT NULL,
+    PRIMARY KEY (student_no, course_no),
+    FOREIGN KEY (student_no) REFERENCES Students(student_no),
+    FOREIGN KEY (course_no) REFERENCES Courses(course_no)
+);
+
+ALTER SESSION SET CONTAINER = ORCLPDB1;
+ALTER SESSION SET CONTAINER = CDB$ROOT;
+SELECT name, open_mode, status FROM v$pdbs;
+SELECT pdb_id, pdb_name, status, open_mode FROM dba_pdbs;
+
+SELECT * FROM DBA_PDBS;
+
+SELECT SYS_CONTEXT('USERENV','CON_NAME') FROM dual;
+
+   CREATE PLUGGABLE DATABASE PDB1
+   ADMIN USER pdb_admin IDENTIFIED BY pdb_admin_password
+   ROLES = (CONNECT, RESOURCE)
+   DEFAULT TABLESPACE users
+   DATAFILE '/opt/oracle/oradata/CDB1/pdb1/pdb1_users01.dbf'
+   SIZE 100M AUTOEXTEND ON
+   FILE_NAME_CONVERT = ('/opt/oracle/oradata/CDB1/pdbseed/', '/opt/oracle/oradata/CDB1/pdb1/');
+   
+   SELECT name, open_mode, status FROM v$pdbs;
+ALTER SESSION SET CONTAINER = PDB1;
+
+SELECT * FROM departments;
+
+ALTER PLUGGABLE DATABASE PDB1 OPEN;
+
+INSERT INTO students (student_no, student_name) VALUES (1, 'Michael');
+INSERT INTO students (student_no, student_name) VALUES (2, 'Doug');
+INSERT INTO students (student_no, student_name) VALUES (3, 'Samantha');
+INSERT INTO students (student_no, student_name) VALUES (4, 'Pete');
+INSERT INTO students (student_no, student_name) VALUES (5, 'Ralph');
+
+INSERT INTO departments (dept_id, dept_name) VALUES (1, 'Computer Science');
+INSERT INTO departments (dept_id, dept_name) VALUES (2, 'Physics');
+INSERT INTO departments (dept_id, dept_name) VALUES (3, 'History');
+
+
+INSERT INTO courses (course_no, dept_id, credits) VALUES ('CS110', 1, 4);
+INSERT INTO courses (course_no, dept_id, credits) VALUES ('CS180', 2, 4);
+INSERT INTO courses (course_no, dept_id, credits) VALUES ('CS210', 1, 3);
+INSERT INTO courses (course_no, dept_id, credits) VALUES ('CS220', 3, 3);
+
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (1, 'CS110', 90);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (1, 'CS180', 85);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (2, 'CS110', 80);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (2, 'CS220', 88);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (3, 'CS210', 95);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (3, 'CS180', 92);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (4, 'CS220', 78);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (5, 'CS110', 85);
+INSERT INTO student_enrollment (student_no, course_no, grade) VALUES (5, 'CS210', 87);
+
+COMMIT;
+
+-- Top performer in each department
+SELECT 
+d.dept_name,
+s.student_name, 
+ se.grade as avg_grade FROM 
+students s INNER JOIN
+student_enrollment se ON s.student_no = se.student_no
+INNER JOIN courses c ON se.course_no = c.course_no 
+INNER JOIN departments d on d.dept_id = c.dept_id 
+WHERE (d.DEPT_ID,se.grade) IN (
+    SELECT c2.dept_id, MAX(se2.grade) FROM STUDENT_ENROLLMENT se2 
+    INNER JOIN courses c2 ON c2.COURSE_NO = se2.COURSE_NO
+     GROUP BY c2.dept_id
+) ORDER BY dept_name,
+avg_grade DESC;
+
+
+-- alterntive query(correct)
+WITH student_dept_avg AS (
+  SELECT d.dept_name, s.student_name, AVG(e.grade) AS avg_grade
+  FROM students s
+  JOIN student_enrollment e ON s.student_no = e.student_no
+  JOIN courses c ON e.course_no = c.course_no
+  JOIN departments d ON c.dept_id = d.dept_id
+  GROUP BY d.dept_name, s.student_name
+),
+max_avg AS (
+  SELECT dept_name, MAX(avg_grade) AS max_grade
+  FROM student_dept_avg
+  GROUP BY dept_name
+)
+SELECT sda.dept_name, sda.student_name, sda.avg_grade
+FROM student_dept_avg sda
+JOIN max_avg m ON sda.dept_name = m.dept_name AND sda.avg_grade = m.max_grade;
+
+SELECT * FROM student_enrollment;
+-- Write a query that returns the names of students who are enrolled in every course offered by the 'Computer Science' department.
+-- working but wrong query
+WITH cs_courses AS (
+    SELECT count(*) as total_courses FROM courses c
+    INNER JOIN departments d ON d.DEPT_ID = c.DEPT_ID
+    WHERE d.dept_name = 'Computer Science'
+ ),
+ individual_student_enrollments AS (
+    SELECT se.STUDENT_NO,count(*) as student_enrollments FROM student_enrollment se
+    INNER JOIN courses c ON c.course_no = se.course_no
+    GROUP BY se.STUDENT_NO
+ ) SELECT s.student_name, ise.student_enrollments FROM students s INNER JOIN individual_student_enrollments ise 
+ ON ise.STUDENT_NO = s.STUDENT_NO INNER JOIN 
+ cs_courses cc ON cc.total_courses = ise.student_enrollments;
+
+-- correct query
+WITH cs_courses AS (
+    SELECT c.course_no
+    FROM courses c
+    JOIN departments d ON c.dept_id = d.dept_id
+    WHERE d.dept_name = 'Computer Science'
+),
+cs_course_count AS (
+    SELECT COUNT(*) AS total_courses
+    FROM cs_courses
+),
+student_cs_enrollments AS (
+    SELECT se.student_no, COUNT(DISTINCT se.course_no) AS cs_enrollments
+    FROM student_enrollment se
+    JOIN cs_courses cc ON se.course_no = cc.course_no
+    GROUP BY se.student_no
+)
+SELECT s.student_name
+FROM students s
+JOIN student_cs_enrollments sce ON sce.student_no = s.student_no
+JOIN cs_course_count ccc ON sce.cs_enrollments = ccc.total_courses;
+
+
+
+SELECT * FROM courses;
+
+-- Write a query that returns the names of departments where every course has at least one student enrolled.
+-- working but wrong query
+WITH course_enrollments AS (
+SELECT count(se.course_no) as er_count, c.dept_id as enr_dept 
+FROM student_enrollment se 
+JOIN courses c ON c.course_no = se.course_no 
+JOIN departments d ON d.dept_id = c.dept_id 
+GROUP BY se.course_no, c.dept_id HAVING count(se.course_no)>=1
+)SELECT de.dept_name FROM DEPARTMENTS de  
+JOIN course_enrollments c1 ON c1.enr_dept = de.dept_id
+GROUP BY de.dept_name;
+
+--alternative query
+SELECT d.dept_name
+FROM departments d
+JOIN courses c ON d.dept_id = c.dept_id
+LEFT JOIN student_enrollment e ON c.course_no = e.course_no
+GROUP BY d.dept_name
+HAVING COUNT(DISTINCT c.course_no) = COUNT(DISTINCT CASE WHEN e.student_no IS NOT NULL THEN c.course_no END);
+
+-- Write a query that returns the names of students who have never enrolled in any course from the 'Physics' department.
+-- working query
+SELECT DISTINCT s.student_name 
+FROM students s 
+JOIN STUDENT_ENROLLMENT se ON se.STUDENT_NO = s.STUDENT_NO
+LEFT JOIN courses c ON c.COURSE_NO = se.COURSE_NO
+LEFT JOIN departments d ON d.dept_id = c.DEPT_ID
+WHERE s.STUDENT_NO NOT IN (SELECT se2.student_no 
+FROM STUDENT_ENROLLMENT se2 JOIN courses c2 ON c2.course_no = se2.course_no 
+JOIN
+departments d2 ON d2.dept_id = c2.dept_id WHERE d2.dept_name = 'Physics');
+
+-- working query
+SELECT s.student_name 
+FROM students s 
+JOIN STUDENT_ENROLLMENT se ON se.STUDENT_NO = s.STUDENT_NO
+LEFT JOIN courses c ON c.COURSE_NO = se.COURSE_NO
+LEFT JOIN departments d ON d.dept_id = c.DEPT_ID
+WHERE s.STUDENT_NO NOT IN (SELECT se2.student_no 
+FROM STUDENT_ENROLLMENT se2 JOIN courses c2 ON c2.course_no = se2.course_no 
+JOIN
+departments d2 ON d2.dept_id = c2.dept_id WHERE d2.dept_name = 'Physics')
+GROUP BY s.student_name;
+
+
+-- Correct query
+SELECT s.student_name 
+FROM students s 
+WHERE EXISTS (
+    SELECT 1 FROM STUDENT_ENROLLMENT se WHERE se.STUDENT_NO = s.STUDENT_NO
+) AND NOT EXISTS(
+    SELECT 1 FROM student_enrollment se2 JOIN
+    COURSES c2 ON c2.COURSE_NO = se2.COURSE_NO JOIN
+    DEPARTMENTS d2 ON d2.DEPT_ID = c2.DEPT_ID WHERE d2.dept_name = 'Physics'
+    AND se2.STUDENT_NO = s.student_no
+);
